@@ -1,4 +1,4 @@
-import { IonTabButton,IonTabBar,IonLabel,IonTabs,IonApp, IonRouterOutlet} from '@ionic/react';
+import { IonMenuButton,IonButtons,IonTabButton,IonTabBar,IonLabel,IonTabs,IonApp, IonRouterOutlet} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 // import ButtonMenu from './components/ButtonMenu';
@@ -14,6 +14,10 @@ const About: React.FC = () => {
 return (
     <IonApp>
         <Tab1/>
+                    {/* VERY IMPORTANT BUTTON */}
+                    <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
         <IonReactRouter>
         <IonTabs>
             <IonRouterOutlet>

@@ -16,6 +16,9 @@
     width: 98%;
 }
 
+/* .camCont{
+    margin-top:-90%;
+} */
 .title{
     font-size: 20px;
     text-align: center;
@@ -28,12 +31,14 @@
 /* PROBLEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM !!!!!!!!!!! */
 
 .addImgIcon{
-    margin-left:2%;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border:2px solid #5ce1e6;
-    background-color: #fefefe;
+    /* margin-left:2%; */
+    margin-top: 20px;
+    width: 150px;
+    /* height: 90px; */
+    /* border-radius: 50%; */
+    /* border:90px solid #5ce1e6;
+    background-color: #fefefe; */
+    clip-path: circle();
 }
 
 /* APPLIED JOBS */
@@ -55,4 +60,9 @@
     height: auto;
     margin-bottom: 15px;
     font-size: 12px;
+}
+
+.cameraIcon{
+    margin-top:-35px;
+    margin-left: 90px;
 }

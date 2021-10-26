@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonContent,
   IonIcon,
   IonItem,
@@ -11,7 +12,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, trashOutline, trashSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
+import { informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, logOutOutline, logOutSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
 import './Menu.css';
 import logo from "../pages/logo.jpg";
 
@@ -50,17 +51,17 @@ const appPages: AppPage[] = [
     mdIcon: archiveSharp
   },
   {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
     title: 'About',
     url: '/pages/about/about',
     iosIcon: informationOutline,
     mdIcon: informationSharp
-  }
+  },
+  {
+    title: 'Logout',
+    url: '/pages/login',
+    iosIcon: logOutOutline,
+    mdIcon: logOutSharp,
+  },
 ];
 
 const Menu: React.FC = () => {
@@ -69,6 +70,7 @@ const Menu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
+
         <IonList id="inbox-list">
           <IonListHeader>Umsebenzi Wethu</IonListHeader>
           <IonNote>info@umsebenziwethu.co.za</IonNote>
@@ -83,7 +85,9 @@ const Menu: React.FC = () => {
               </IonMenuToggle>
             );
           })}
+          {/* <IonButton expand="full" href="/src/pages//Login.tsx">Logout</IonButton> */}
         </IonList>
+        
       </IonContent>
     </IonMenu>
   );

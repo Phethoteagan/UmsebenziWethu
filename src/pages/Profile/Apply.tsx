@@ -1,10 +1,12 @@
 import React from 'react';
 import "./Style.css";
-import { IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
-import {  } from 'ionicons/icons';
+import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
+import { camera } from 'ionicons/icons';
+import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 
-
-const Apply: React.FC = () => (
+const Apply: React.FC = () => {
+    const { photo, takePhoto} = usePhotoGallery();
+    return (
     <IonPage>
         <IonHeader>
             <IonToolbar>
@@ -25,7 +27,22 @@ const Apply: React.FC = () => (
             <IonButton class="postBtn" color="secondary" href="./pages/Profile/Post">Post</IonButton><br/>
             <IonTitle class="cdTitle" >User Details</IonTitle>
 
-            <img src="https://static.vecteezy.com/system/resources/previews/002/002/247/non_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg" alt="" className="addImgIcon"/>
+            {/* <img src="https://static.vecteezy.com/system/resources/previews/002/002/247/non_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg" alt="" className="addImgIcon"/> */}
+
+                <IonGrid>
+                    <IonGrid>
+                        <IonRow className="addImgIcon">
+                        {photo && <IonImg  src={photo.webviewPath } />}
+                        </IonRow>
+                    </IonGrid>
+                    <IonFab >
+                    <IonFabButton className="cameraIcon" onClick={() => takePhoto()}>
+                        <IonIcon  icon={camera}></IonIcon>
+                    </IonFabButton>
+                    </IonFab>
+                </IonGrid>
+
+            <IonContent className="camCont">
             <IonRow class="item" >
                 <IonItem>
                     <IonLabel position= "floating">User Name </IonLabel><IonInput/>
@@ -40,6 +57,7 @@ const Apply: React.FC = () => (
                     <IonLabel position= "floating">Address </IonLabel><IonInput/>
                 </IonItem>
             </IonRow>
+            </IonContent>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>
 
             <IonButton class="jobs" color="success">Rejected</IonButton>
@@ -58,6 +76,7 @@ const Apply: React.FC = () => (
             <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
         </IonContent>
     </IonPage>
-);
+    )
+    };
 
 export default Apply

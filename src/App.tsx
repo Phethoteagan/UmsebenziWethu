@@ -28,22 +28,17 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Startup from './Startup';
-import Default from './pages/Home/Default';
+
 // import Default from './pages/Home/Default';
 /*Font awesome thangs*/
 
 
-
 const App: React.FC = () => (
   <IonApp>
-      <Default/>
+
     <IonReactRouter>
       <IonRouterOutlet>
       <Startup />
-
-        {/* <Route exact path="/home">
-          <Home />
-        </Route> */}
 
         <Route path="/" exact={true}>
         <Wethu />
@@ -64,7 +59,6 @@ const App: React.FC = () => (
         <Route path="/Start">
           <Signin/>
         </Route>
-        
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

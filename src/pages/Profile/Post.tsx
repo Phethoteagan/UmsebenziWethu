@@ -1,9 +1,13 @@
 import React from 'react';
 import "./Style.css"
-import {IonRow,IonItem,IonIcon,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar, IonLabel } from '@ionic/react';
+import {IonFab,IonFabButton,IonImg ,IonGrid,IonRow,IonItem,IonIcon,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar, IonLabel } from '@ionic/react';
 import {  personOutline, chevronDownOutline} from 'ionicons/icons';
+import { camera } from 'ionicons/icons';
+import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 
-const Post: React.FC = () => (
+const Post: React.FC = () => {
+    const { photo, takePhoto} = usePhotoGallery();
+    return(
     <IonPage>
         <IonHeader>
             <IonToolbar>
@@ -22,21 +26,37 @@ const Post: React.FC = () => (
             <IonButton class="applyBtn" color="secondary" href="./pages/Profile/Apply">Apply</IonButton>
             <IonButton class="postBtn" color="light" >Post</IonButton><br/>
             <IonTitle class="cdTitle">Company Details</IonTitle>
-            <img src="https://www.lifeisagarden.co.za/wp-content/uploads/2021/03/LIAG-Web-Banner-Feb-2021-385x426.jpg" alt=""  className="addImgIcon"/>
-            <IonRow class="item" >
-                <IonItem>
-                    <IonLabel position= "floating">User Name </IonLabel><IonInput/>
-                </IonItem><br/>
-                <IonItem>
-                    <IonLabel position= "floating">Surname</IonLabel><IonInput/>
-                </IonItem>
-                <IonItem>
-                    <IonLabel position= "floating">Skills </IonLabel><IonInput/>
-                </IonItem>
-                <IonItem>
-                    <IonLabel position= "floating">Address </IonLabel><IonInput/>
-                </IonItem>
-            </IonRow>
+            {/* <img src="https://www.lifeisagarden.co.za/wp-content/uploads/2021/03/LIAG-Web-Banner-Feb-2021-385x426.jpg" alt=""  className="addImgIcon"/> */}
+    
+                <IonGrid>
+                    <IonGrid>
+                        <IonRow className="addImgIcon">
+                        {photo && <IonImg  src={photo.webviewPath } />}
+                        </IonRow>
+                    </IonGrid>
+                    <IonFab >
+                    <IonFabButton className="cameraIcon" onClick={() => takePhoto()}>
+                        <IonIcon  icon={camera}></IonIcon>
+                    </IonFabButton>
+                    </IonFab>
+                </IonGrid>
+
+            <IonContent className="camCont">
+                <IonRow class="item" >
+                    <IonItem>
+                        <IonLabel position= "floating">User Name </IonLabel><IonInput/>
+                    </IonItem><br/>
+                    <IonItem>
+                        <IonLabel position= "floating">Surname</IonLabel><IonInput/>
+                    </IonItem>
+                    <IonItem>
+                        <IonLabel position= "floating">Skills </IonLabel><IonInput/>
+                    </IonItem>
+                    <IonItem>
+                        <IonLabel position= "floating">Address </IonLabel><IonInput/>
+                    </IonItem>
+                </IonRow>
+            </IonContent>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>
 
             <IonButton class="jobs" color="success">Rejected</IonButton>
@@ -86,6 +106,7 @@ const Post: React.FC = () => (
 
         </IonContent>
     </IonPage>
-);
+    );
+};
 
 export default Post

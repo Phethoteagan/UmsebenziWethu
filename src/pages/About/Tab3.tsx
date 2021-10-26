@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {  IonMenuButton,IonButtons,IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
@@ -6,6 +6,10 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+          {/* VERY IMPORTANT BUTTON */}
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
           <IonTitle className='name3'>Terms & Conditions</IonTitle>
         </IonToolbar>
       </IonHeader>

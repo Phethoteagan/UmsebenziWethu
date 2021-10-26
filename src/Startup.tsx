@@ -10,7 +10,6 @@ import About from './pages/About/About';
 import Default from './pages/Home/Default';
 
 
-
 const Startup: React.FC = () => {
   return (
     <IonApp>
@@ -19,14 +18,15 @@ const Startup: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu/>
 
-          {/* <ButtonMenu/> */}
-          <IonRouterOutlet id="main">
-            {/* <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
-            </Route> */}
-            {/* <Route path="/page/:name" exact={true}>
-              <Page />
-            </Route> */}
+      {/* <ButtonMenu/> */}
+      <IonRouterOutlet id="main">
+        {/* <Route path="/" exact={true}>
+          <Redirect to="/page/Inbox" />
+        </Route> */}
+        {/* <Route path="/page/:name" exact={true}>
+          <Page />
+        </Route> */}
+        <Default/>
         <Route path="/pages/Home/Default" exact={true}>
           <Default />
         </Route>
@@ -39,10 +39,10 @@ const Startup: React.FC = () => {
             <Route path="/pages/About/About" exact={true}>
               <About/>
             </Route>
+
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
-      
     </IonApp>
     
   );
