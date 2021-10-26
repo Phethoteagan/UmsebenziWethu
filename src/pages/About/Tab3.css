@@ -1,0 +1,14 @@
+.body{
+    --ion-background-color:#013220;
+}
+.name3{
+    text-align: center;
+}
+.content3{
+    text-align: center;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:grey;
+    font-size: larger;
+}

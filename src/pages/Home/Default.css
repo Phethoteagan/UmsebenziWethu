@@ -1,0 +1,362 @@
+.body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.grid {
+  --ion-grid-column-padding-lg: 5px;
+}
+.grid2 {
+  --ion-grid-column-padding-xl: 10px;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.but1 {
+  --ion-border-radius: 50px;
+}
+.background {
+  --ion-background-color: #013220;
+  margin-left: 80px;
+}
+.flip-card {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card2 {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card3 {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card4 {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card5 {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card6 {
+  width: 350px;
+  height: 280px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner2 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner3 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner4 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner5 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner6 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+.flip-card3:hover .flip-card-inner3 {
+  transform: rotateY(180deg);
+}
+.flip-card4:hover .flip-card-inner4 {
+  transform: rotateY(180deg);
+}
+.flip-card5:hover .flip-card-inner5 {
+  transform: rotateY(180deg);
+}
+.flip-card6:hover .flip-card-inner6 {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front2,
+.flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front3,
+.flip-card-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front4,
+.flip-card-back4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front5,
+.flip-card-back5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front6,
+.flip-card-back6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-front2 {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-front3 {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-front4 {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-front5 {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-front6 {
+  background-color: #013220;
+  color: black;
+}
+.flip-card-back {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.flip-card-back2 {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.flip-card-back3 {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.flip-card-back4 {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.flip-card-back5 {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.flip-card-back6 {
+  background-color: #013220;
+  color: grey;
+  transform: rotateY(180deg);
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
+}
+.Apply {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+  margin-left: 50px;
+}
+.Apply2 {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+  
+}
+.Apply3 {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+}
+.Apply4 {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+}
+.Apply5 {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+}
+.Apply6 {
+  border-radius: 15px;
+  background-color: black;
+  color: #e0e0e0;
+  border-color: black;
+  width: 80px;
+  height: 20px;
+}
+.Apply:hover {
+  color: #bbb;
+}
+.Apply2:hover {
+  color: #bbb;
+}
+.Apply3:hover {
+  color: #bbb;
+}
+.Apply4:hover {
+  color: #bbb;
+}
+.Apply5:hover {
+  color: #bbb;
+}
+.Apply6:hover {
+  color: #bbb;
+}
+.caption {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.caption2 {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.caption3 {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.caption4 {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.caption5 {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.caption6 {
+  background-color: dodgerblue;
+  border-radius: 6px;
+  margin-top: -8px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.welcome {
+  text-align: center;
+  color: grey;
+}

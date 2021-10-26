@@ -1,0 +1,184 @@
+.FHeader{
+    --ion-background-color: #073351;
+}
+.TitleName{
+    color: yellowgreen;
+}
+
+.ContentBlock{
+    --ion-background-color: black;
+    --color: #5ce1e6;
+}
+
+.LblName{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*buttons*/
+.LBtn{
+    height:40px;
+    width: 50%;
+    margin-left: 25%;
+    color:rgb(182, 240, 24);
+    font-weight: bold;
+    background-color: #073351;
+}
+
+.logo{
+    width: 80%;
+    height: 350px;
+    margin-left: 10%;
+}
+.logo1{
+    width: 80%;
+    height: 350px;
+    margin-left: 10%;
+}
+
+.svgs{
+    width:40px;
+}
+
+.email{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 45px;
+}
+
+.password{
+    background-color: whitesmoke;
+    width:100%;
+    height: 45px;    
+}
+
+.Cpassword{
+    background-color: whitesmoke;
+    width:100%;
+    height: 45px;    
+}
+
+.NewAccount{
+    text-align: center;
+}
+
+.popup{
+    width: 50%;
+    height:100px;
+    margin-left: 25%;
+}
+.popover-content{
+    --background: black;
+    width: 40%;
+    margin-left: 0% ;
+}
+
+.feedback{
+    color: yellowgreen;
+    font-weight: bolder;
+    text-align: center;
+    width: 40%;
+    margin-left: 15%;
+}
+
+.link{ 
+    text-align: center;
+}
+
+@keyframes wethuz {
+    0%   {width: 50%}
+    25%  {width: 0%; margin-left: 50%}
+    50%  {width: 50%; margin-left: 25%}
+    75%  {width: 0%; margin-left: 50%}
+    100% {width: 50%; margin-left: 25%}
+}
+  
+.WethuAnimation{
+    width: 50%;
+    height: 600px;
+    animation-name: wethuz;
+    animation-duration: 25s;
+    margin-left: 25%;
+    animation-iteration-count: 5;
+}
+
+.card{
+    background-color: #5ce1e6;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 70px;
+    color: black;
+    height: 250px;
+    border-radius: 20px;
+}
+.title{
+    margin-top: 40px;
+    font-weight: 700;
+}
+
+.content{
+    font-size: 16pt;
+    margin-top: 20px;
+}
+ion-label{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 25%;
+}
+
+
+/*buttons*/
+ion-button{
+    height:40px;
+    width: 30%;
+    margin-left: 35%;
+    color:rgb(113, 239, 248);
+    font-weight: bold;
+    background-color: #073351;
+
+}
+.form{
+    border-radius: 50px;
+}
+
+.logo{
+    width: 80%;
+    height: 350px;
+    margin-left: 10%;
+}
+
+.svgs{
+    width:20px;
+}
+
+.fingerb{
+    height:40px;
+    width: 40%;
+    margin-left: 30%;
+    color:rgb(113, 239, 248);
+    font-weight: bold;
+    background-color: #073351;
+
+}
+
+.email{
+    background-color: whitesmoke;
+    width: 50%;
+    height: 45px;
+    margin-left: 25%;
+    border-radius: 8px;
+}
+.skills{
+    height: 80px;
+    width:50%;
+    margin-left: 25%;
+    border-radius: 8px;
+}
+
+
+.popover-content{
+    --background: black;
+    width: 40%;
+    margin-left: 7% ;
+    align-content: center;
+}

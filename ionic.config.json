@@ -1,0 +1,7 @@
+{
+  "name": "UW_DONE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

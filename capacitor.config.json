@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "UW_DONE",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
