@@ -4,7 +4,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
 import React, { useState } from 'react';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
 import "firebase/firestore";
 import { ellipsisVerticalSharp } from 'ionicons/icons';
