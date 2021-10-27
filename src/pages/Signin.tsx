@@ -98,7 +98,7 @@ const Signin: React.FC = () => {
         <br/> <br/>
         
         <IonLabel>Description/Skills:</IonLabel><br></br>
-        <IonInput  placeholder="Description/Skills" className="skills" onIonChange={(e:any)=>setDescription(e.target.value)}></IonInput>
+        <IonInput placeholder="Description/Skills" className="skills" onIonChange={(e:any)=>setDescription(e.target.value)}></IonInput>
         <br/> <br/> 
 
         <IonLabel>Password:</IonLabel><br></br>
