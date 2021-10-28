@@ -193,40 +193,52 @@
   color: black;
 }
 .flip-card-back {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .flip-card-back2 {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .flip-card-back3 {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .flip-card-back4 {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .flip-card-back5 {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .flip-card-back6 {
-  background-color: dodgerblue;
-  color: black;
+  background-color: #013220;
+  color: grey;
   transform: rotateY(180deg);
-  padding-top: 70px;
+  padding-top: 0px;
+  padding-left: 30px;
+  text-align: center;
 }
 .Apply {
   border-radius: 15px;
@@ -235,6 +247,7 @@
   border-color: black;
   width: 80px;
   height: 20px;
+  margin-left: 50px;
 }
 .Apply2 {
   border-radius: 15px;
@@ -243,6 +256,7 @@
   border-color: black;
   width: 80px;
   height: 20px;
+  
 }
 .Apply3 {
   border-radius: 15px;

@@ -39,18 +39,6 @@ const appPages: AppPage[] = [
     mdIcon: personCircleSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
-  },
-  {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
     title: 'About',
     url: '/pages/about/about',
     iosIcon: informationOutline,

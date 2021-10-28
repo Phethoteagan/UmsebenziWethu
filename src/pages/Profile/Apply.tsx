@@ -4,8 +4,11 @@ import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,Ion
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 
+
 const Apply: React.FC = () => {
     const { photo, takePhoto} = usePhotoGallery();
+
+
     return (
     <IonPage>
         <IonHeader>
@@ -18,7 +21,7 @@ const Apply: React.FC = () => {
             </IonToolbar>
         </IonHeader>
         
-        <IonContent>
+        <IonContent >
             {/*-- Anchor --*/}
             {/* <IonButton href="#">Anchor</IonButton> */}
 
@@ -42,7 +45,7 @@ const Apply: React.FC = () => {
                     </IonFab>
                 </IonGrid>
 
-            <IonContent className="camCont">
+            <IonContent >
             <IonRow class="item" >
                 <IonItem>
                     <IonLabel position= "floating">User Name </IonLabel><IonInput/>
@@ -57,7 +60,7 @@ const Apply: React.FC = () => {
                     <IonLabel position= "floating">Address </IonLabel><IonInput/>
                 </IonItem>
             </IonRow>
-            </IonContent>
+
             <IonTitle class="title">Applied Jobs</IonTitle><br/>
 
             <IonButton class="jobs" color="success">Rejected</IonButton>
@@ -74,6 +77,7 @@ const Apply: React.FC = () => {
             <IonButton class="jobs" color="medium">Pending</IonButton>
             <IonButton class="jobs" color="danger">Approved</IonButton><br/>
             <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
+            </IonContent>
         </IonContent>
     </IonPage>
     )
