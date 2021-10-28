@@ -4,8 +4,11 @@ import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,Ion
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 
+
 const Apply: React.FC = () => {
     const { photo, takePhoto} = usePhotoGallery();
+
+
     return (
     <IonPage>
         <IonHeader>
