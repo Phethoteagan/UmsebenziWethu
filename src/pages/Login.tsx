@@ -64,10 +64,10 @@ import fprint from './FPrint.jpg'
       </IonHeader>
       <IonContent fullscreen className='ContentBlock'>
     
-        <IonImg src={logo} className="logo"></IonImg>
+        <IonImg src={logo} className="logo2"></IonImg>
 
         <IonLabel className="LblName">Email:</IonLabel><br></br>
-        <IonInput type="email" placeholder="Email" className="email" onIonChange={(e:any)=>setMail(e.target.value)}></IonInput>
+        <IonInput type="email" placeholder="Email" className="emaill" onIonChange={(e:any)=>setMail(e.target.value)}></IonInput>
         <br></br>
         
         <IonLabel className="LblName">Password:</IonLabel><br></br>

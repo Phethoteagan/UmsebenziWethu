@@ -25,37 +25,38 @@
     background-color: #073351;
 }
 
-.logo{
-    width: 80%;
-    height: 350px;
-    margin-left: 10%;
-}
-.logo1{
-    width: 80%;
-    height: 350px;
-    margin-left: 10%;
+.logo2{
+    width: 60%;
+    height: 300px;
+    margin-left: 20%;
 }
 
 .svgs{
     width:40px;
 }
 
-.email{
+.emaill{
     background-color: whitesmoke;
-    width: 100%;
+    width: 70%;
+    margin-left: 15%;
     height: 45px;
+    border-radius: 10px;
 }
 
 .password{
     background-color: whitesmoke;
-    width:100%;
+    width: 70%;
     height: 45px;    
+    margin-left: 15%;
+    border-radius: 10px;
 }
 
 .Cpassword{
     background-color: whitesmoke;
-    width:100%;
-    height: 45px;    
+    width: 70%;
+    height: 45px;   
+    margin-left: 15%; 
+    border-radius: 10px;
 }
 
 .NewAccount{
@@ -87,9 +88,9 @@
 
 @keyframes wethuz {
     0%   {width: 50%}
-    25%  {width: 0%; margin-left: 50%}
+    25%  {width: 30%; margin-left: 35%}
     50%  {width: 50%; margin-left: 25%}
-    75%  {width: 0%; margin-left: 50%}
+    75%  {width: 30%; margin-left: 35%}
     100% {width: 50%; margin-left: 25%}
 }
   
@@ -98,7 +99,7 @@
     height: 600px;
     animation-name: wethuz;
     animation-duration: 25s;
-    margin-left: 25%;
+    margin-left: 20%;
     animation-iteration-count: 5;
 }
 
@@ -106,14 +107,26 @@
     background-color: #5ce1e6;
     width: 90%;
     margin-left: 5%;
-    margin-top: 70px;
+    margin-top: 10px;
     color: black;
-    height: 250px;
+    height: 230px;
     border-radius: 20px;
 }
 .title{
     margin-top: 40px;
     font-weight: 700;
+}
+
+.LBtn{
+    width: 40%;
+    color: black;
+    background-color: #5ce1e6;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: 30%;
+}
+.title {
+    color: black;
 }
 
 .content{
@@ -142,9 +155,9 @@ ion-button{
 }
 
 .logo{
-    width: 80%;
-    height: 350px;
-    margin-left: 10%;
+    width: 50%;
+    height: 300px;
+    margin-left: 25%;
 }
 
 .svgs{
@@ -182,3 +195,24 @@ ion-button{
     margin-left: 7% ;
     align-content: center;
 }
+
+.button-LBtn{
+    height:40px;
+    width: 20%;
+    margin-left: 40%;
+    color: black;
+    font-weight: bold;
+    background-color: #073351;
+}
+
+.logo1{
+    width: 50%;
+    height: 300px;
+    margin-left: 25%;
+}
+
+.content {
+    text-align: center;
+}
+
+

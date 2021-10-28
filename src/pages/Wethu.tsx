@@ -9,7 +9,7 @@ const Wethu: React.FC = () => {
         <IonContent className='ContentBlock'>
         <IonImg src={logo} className="WethuAnimation"></IonImg>
         
-        <IonButton className="button LBtn" color="#5ce1e6" href="./slider">Click here to continue</IonButton>
+        <IonButton className="button-LBtn" href="./slider">Click here to continue</IonButton>
         </IonContent>
   
       </IonPage>

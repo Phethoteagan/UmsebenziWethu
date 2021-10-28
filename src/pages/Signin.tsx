@@ -3,6 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
   IonImg, IonLabel, IonButton, IonPopover, IonInput,useIonToast, IonToast} from '@ionic/react';
 import React, { useState } from 'react';
 // Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
@@ -23,8 +24,6 @@ const firebaseConfig = {
   appId: "1:947399937368:web:c9422f04ceb51c1a02692d",
   measurementId: "G-NJTYHST03S"
 };
-
-
 
 
 
@@ -65,10 +64,7 @@ const Signin: React.FC = () => {
     })
     alert("Your User Registration was successful");}
 
-
-    
   }
-
 
   const [thankyouState, setThankyou] = 
   useState({ ThankYou: false, event: undefined });
