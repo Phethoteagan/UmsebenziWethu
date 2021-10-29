@@ -9,6 +9,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
 import "firebase/firestore";
 import { ellipsisVerticalSharp } from 'ionicons/icons';
+import {toast} from './toast'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,11 +47,11 @@ const Signin: React.FC = () => {
     var coll=collection(db,"Users");
     
     if(email.trim()==='' || password.trim()==='' || name.trim()==='' || description.trim()==='' || address.trim()==='' || confirm.trim()===''){
-     alert("Please fill in all the fields");
+     toast("Please fill in all the fields");
      
     }
     if( password!==confirm){
-      alert(" passwords need to match");
+      toast(" passwords need to match");
       
     }
     
@@ -62,7 +63,7 @@ const Signin: React.FC = () => {
       "Password":{password},
       "ConfirmPassword":{confirm}
     })
-    alert("Your User Registration was successful");}
+    toast("Your User Registration was successful");}
 
   }
 

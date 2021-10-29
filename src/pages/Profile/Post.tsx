@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Style.css"
-import {IonFab,IonFabButton,IonImg ,IonGrid,IonRow,IonItem,IonIcon,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar, IonLabel } from '@ionic/react';
+
+import {IonFab,IonFabButton,IonImg,IonGrid,IonRow,IonItem,IonIcon,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar, IonLabel } from '@ionic/react';
 import {  personOutline, chevronDownOutline} from 'ionicons/icons';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
@@ -61,7 +62,7 @@ const Post: React.FC = () => {
                 <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>
-                <IonTitle>Profile</IonTitle>
+                <IonTitle className ="profile">Profile</IonTitle>
             </IonToolbar>
         </IonHeader>
         
@@ -165,6 +166,11 @@ const Post: React.FC = () => {
                     <li>Airpot license</li>
             </ul>
             </IonButton><br/>
+
+          
+            
+
+
 
         </IonContent>
     </IonPage>
