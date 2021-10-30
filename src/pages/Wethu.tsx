@@ -1,15 +1,16 @@
 import { IonContent, IonPage, IonImg, IonButton
 } from '@ionic/react';
 import './Login.css';
-import logo from './logo.jpg'
+import WhiteWethu from './WhiteWethu.jpg'
 
 const Wethu: React.FC = () => {
     return (
         <IonPage>
         <IonContent className='ContentBlock'>
-        <IonImg src={logo} className="WethuAnimation"></IonImg>
-        
-        <IonButton className="button-LBtn" href="./slider">Click here to continue</IonButton>
+        <IonImg src={WhiteWethu} className="WethuAnimation"></IonImg>
+
+        <div className="link1"><a href="./slider">Continue</a></div>
+
         </IonContent>
   
       </IonPage>

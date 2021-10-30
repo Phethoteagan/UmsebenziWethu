@@ -89,7 +89,6 @@ const Post: React.FC = () => {
                 </IonGrid>
 
             <IonContent className="camCont">
-                <IonRow class="item" >
                     <IonItem>
                         <IonLabel position= "floating">Job title </IonLabel>
                         <IonInput value={jobTitle}
@@ -115,8 +114,7 @@ const Post: React.FC = () => {
                         <IonInput value={requiredSkills} 
                         onIonChange={e => setRequiredSkills(e.detail.value!)}/>
                     </IonItem>
-                    
-                </IonRow>
+
             </IonContent>
             <IonButton onClick={postInfo}>Post Job</IonButton>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>

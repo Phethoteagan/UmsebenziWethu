@@ -2,6 +2,7 @@ import { IonCardContent, IonContent, IonPage, IonSlide, IonSlides, IonCard, IonC
 import React from 'react';
 import logo from './logo.jpg'
 import './Login.css'
+import WhiteWethu from './WhiteWethu.jpg'
 
 const slide_options={
   initialSlide: 0,
@@ -15,7 +16,7 @@ const Slider: React.FC = () => {
     <IonPage>
       
       <IonContent className='ContentBlock'>
-      <IonImg src={logo} className="logo1"></IonImg>
+      <IonImg src={WhiteWethu} className="logo1"></IonImg>
         <IonSlides options={slide_options} >
           
           <IonSlide>

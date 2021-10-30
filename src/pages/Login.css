@@ -2,11 +2,11 @@
     --ion-background-color: #073351;
 }
 .TitleName{
-    color: yellowgreen;
+    color: #5ce1e6;
 }
 
 .ContentBlock{
-    --ion-background-color: black;
+    --ion-background-color: white;
     --color: #5ce1e6;
 }
 
@@ -15,14 +15,8 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/*buttons*/
-.LBtn{
-    height:40px;
-    width: 50%;
-    margin-left: 25%;
-    color:rgb(182, 240, 24);
-    font-weight: bold;
-    background-color: #073351;
+.link1{
+    text-align: center;
 }
 
 .logo2{
@@ -41,6 +35,7 @@
     margin-left: 15%;
     height: 45px;
     border-radius: 10px;
+    border: solid black;
 }
 
 .password{
@@ -49,6 +44,7 @@
     height: 45px;    
     margin-left: 15%;
     border-radius: 10px;
+    border: solid black;
 }
 
 .Cpassword{
@@ -87,7 +83,7 @@
 }
 
 @keyframes wethuz {
-    0%   {width: 50%}
+    0%   {width: 50%; margin-left: 25%}
     25%  {width: 30%; margin-left: 35%}
     50%  {width: 50%; margin-left: 25%}
     75%  {width: 30%; margin-left: 35%}
@@ -96,10 +92,14 @@
   
 .WethuAnimation{
     width: 50%;
-    height: 600px;
+    height: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 0%;
     animation-name: wethuz;
     animation-duration: 25s;
-    margin-left: 20%;
+    margin-left: 25%;
     animation-iteration-count: 5;
 }
 
@@ -119,8 +119,8 @@
 
 .LBtn{
     width: 40%;
-    color: black;
-    background-color: #5ce1e6;
+    color: #5ce1e6;
+    background-color: #073351;
     margin-top: 10px;
     border-radius: 10px;
     margin-left: 30%;
@@ -136,7 +136,8 @@
 ion-label{
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 25%;
+    margin-left: 20%;
+    color: black;
 }
 
 
@@ -148,8 +149,9 @@ ion-button{
     color:rgb(113, 239, 248);
     font-weight: bold;
     background-color: #073351;
-
 }
+
+
 .form{
     border-radius: 50px;
 }
@@ -212,6 +214,10 @@ ion-button{
 }
 
 .content {
+    text-align: center;
+}
+
+.ForgotPassword{
     text-align: center;
 }
 

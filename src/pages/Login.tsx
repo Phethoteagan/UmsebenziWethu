@@ -1,12 +1,10 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
 IonImg, IonLabel, IonButton, IonPopover, IonInput} from '@ionic/react';
 import './Login.css';
-import React, { useState } from 'react';
-import logo from './logo.jpg'
+import React, { useState } from 'react'
 import google from './google.png'
-import fingerprint from './fingerprint.png'
 import login from './login.png'
-import fprint from './FPrint.jpg'
+import WhiteWethu from './WhiteWethu.jpg'
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
@@ -64,7 +62,7 @@ import fprint from './FPrint.jpg'
       </IonHeader>
       <IonContent fullscreen className='ContentBlock'>
     
-        <IonImg src={logo} className="logo2"></IonImg>
+        <IonImg src={WhiteWethu} className="logo2"></IonImg>
 
         <IonLabel className="LblName">Email:</IonLabel><br></br>
         <IonInput type="email" placeholder="Email" className="emaill" onIonChange={(e:any)=>setMail(e.target.value)}></IonInput>
@@ -76,34 +74,10 @@ import fprint from './FPrint.jpg'
         <br></br>
         <IonButton color="blue"  href='./startup' className='LBtn' onClick={()=>Login()}>Login <IonImg src={login} className="svgs"></IonImg></IonButton>
         <br></br>
-        <IonButton color="blue" className='LBtn'>Login with Google<IonImg src={google} className="svgs"></IonImg></IonButton>
-        <br></br>
-
-        <>
-      <IonPopover
-        cssClass='popover-content'
-        event={popoverState.event}
-        isOpen={popoverState.showPopover}
-        onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
-      >
-        <IonImg src={fprint} className="popup"></IonImg>
-      </IonPopover>
-
-        <IonButton onClick={
-        (e: any) => {
-          e.persist();
-          setShowPopover({ showPopover: true, event: e })
-          }} color="blue"
-          className='LBtn'>
-          Login with fingerprint
-          <IonImg src={fingerprint} className="svgs"></IonImg>
-        
-          </IonButton>
-        </>
         
 
       <p className="NewAccount"> Don't have an account? Click <a href="./signin">here</a> to sign up </p>
-        <p className="ForgotPassword">Forgot password?</p>
+        <p className="ForgotPassword"> <a href="www.hi.com"> Forgot password?</a></p>
       </IonContent>
 
     </IonPage>
