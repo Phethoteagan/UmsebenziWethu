@@ -1,4 +1,4 @@
-import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton,IonGrid, IonRow, IonCol, ViewLifeCycleManager} from '@ionic/react';
+import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent,IonGrid, IonRow, IonCol, ViewLifeCycleManager} from '@ionic/react';
 import { useState } from 'react';
 import './Default.css';
 import cleaning from './cleaning.jpg'
@@ -56,6 +56,7 @@ const Default: React.FC = () => {
            
 
             <div className='buttons'>
+            
              
             <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
 

@@ -2,6 +2,8 @@ import './Login.css';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
   IonImg, IonLabel, IonButton, IonPopover, IonInput,useIonToast, IonToast} from '@ionic/react';
 import React, { useState } from 'react';
+import { Geolocation } from './Geolocation';
+import Render from './Render';
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "firebase/app";
@@ -9,6 +11,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
 import "firebase/firestore";
 import { ellipsisVerticalSharp } from 'ionicons/icons';
+import Details from './Profile/details';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -92,6 +95,8 @@ const Signin: React.FC = () => {
         <IonLabel>Address:</IonLabel><br></br>
         <IonInput  placeholder="Address" className="email" onIonChange={(e:any)=>setAddress(e.target.value)}></IonInput>
         <br/> <br/>
+
+        <Render/>
         
         <IonLabel>Description/Skills:</IonLabel><br></br>
         <IonInput placeholder="Description/Skills" className="skills" onIonChange={(e:any)=>setDescription(e.target.value)}></IonInput>

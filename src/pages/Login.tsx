@@ -7,7 +7,7 @@ import google from './google.png'
 import fingerprint from './fingerprint.png'
 import login from './login.png'
 import fprint from './FPrint.jpg'
-
+import 'firebase/auth'
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
   import { getAnalytics } from "firebase/analytics";
@@ -37,19 +37,9 @@ import fprint from './FPrint.jpg'
    const [email,setMail] = useState("");
    const [password,setPassword] = useState("");
 
+
    function Login(){
-     {/*db.collection("Users")
-     .where("Email","==",{email})
-     .where("Password","==",{password})
-     .limit(1)
-     .get()
-     .then((documents)=>{
-       if(documents.empty == true){
-         alert("account not found")
-       }else{
-         alert("Welcome")
-       }
-     });*/}
+    
    }
 
 
