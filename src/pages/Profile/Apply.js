@@ -3,9 +3,9 @@ import "./Style.css";
 import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
+import Database from '../Database.js'
 
-
-const Apply: React.FC = () => {
+const Apply = () => {
     const { photo, takePhoto} = usePhotoGallery();
 
 
@@ -78,6 +78,7 @@ const Apply: React.FC = () => {
             <IonButton class="jobs" color="danger">Approved</IonButton><br/>
             <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
             </IonContent>
+            
         </IonContent>
     </IonPage>
     )

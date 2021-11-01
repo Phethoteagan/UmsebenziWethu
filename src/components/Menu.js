@@ -18,14 +18,14 @@ import logo from "../pages/logo.jpg";
 
 
 
-interface AppPage {
-  url: string;
-  iosIcon: string;
-  mdIcon: string;
-  title: string;
-}
+// interface AppPage {
+//   url: string;
+//   iosIcon: string;
+//   mdIcon: string;
+//   title: string;
+// }
 
-const appPages: AppPage[] = [
+const appPages = [
   {
     title: 'Home',
     url: '/pages/home/default',
@@ -39,6 +39,12 @@ const appPages: AppPage[] = [
     mdIcon: personCircleSharp
   },
   {
+    title: 'Dashboard',
+    url: '/pages/dashboard',
+    iosIcon: personCircleOutline,
+    mdIcon: personCircleSharp
+  },
+  {
     title: 'About',
     url: '/pages/about/about',
     iosIcon: informationOutline,
@@ -46,13 +52,13 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Logout',
-    url: '/pages/login',
+    url: '/pages/Login',
     iosIcon: logOutOutline,
     mdIcon: logOutSharp,
   },
 ];
 
-const Menu: React.FC = () => {
+const Menu = () => {
   const location = useLocation();
 
   return (

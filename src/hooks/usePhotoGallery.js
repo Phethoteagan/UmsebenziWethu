@@ -6,13 +6,13 @@ import {
     CameraSource,
 } from "@capacitor/camera";
 
-export interface UserPhoto {
-    filepath: string;
-    webviewPath?: string;
-}
+// export interface UserPhoto {
+//     filepath: string;
+//     webviewPath?: string;
+// }
 
 export function usePhotoGallery() {
-    const [photo, setPhotos] = useState<UserPhoto>();
+    const [photo, setPhotos] = useState();
     const [base64,setBase64] = useState("")
 
 
@@ -24,7 +24,7 @@ export function usePhotoGallery() {
     quality: 100,
     });
 
-    setBase64(await base64FromPath(cameraPhoto.webPath!));
+    setBase64(await base64FromPath(cameraPhoto.webPath));
 
     const fileName = new Date().getTime() + ".jpeg";
     const newPhoto = {
