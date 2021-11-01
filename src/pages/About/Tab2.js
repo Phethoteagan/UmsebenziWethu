@@ -10,7 +10,7 @@ import twitter from './twitter.png'
 
 
 
-const Tab2: React.FC = () => {
+const Tab2 = () => {
   return (
     
         <IonPage>

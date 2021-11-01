@@ -3,7 +3,7 @@ import { IonContent, IonPage, IonImg, IonButton
 import './Login.css';
 import WhiteWethu from './WhiteWethu.jpg'
 
-const Wethu: React.FC = () => {
+const Wethu = () => {
     return (
         <IonPage>
         <IonContent className='ContentBlock'>

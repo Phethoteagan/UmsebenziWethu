@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import Signin from './pages/Signin';
 import Slider from './pages/Slider';
 import Wethu from './pages/Wethu';
-
+import Post from "./pages/Profile/Post"
 
 
 
@@ -33,7 +33,7 @@ import Startup from './Startup';
 /*Font awesome thangs*/
 
 
-const App: React.FC = () => (
+const App = () => (
   <IonApp>
 
     <IonReactRouter>
@@ -47,6 +47,7 @@ const App: React.FC = () => (
 
         <Route  path="/slider">
           <Slider />
+          {/* <Post /> */}
         </Route>
 
         <Route  path="/login">

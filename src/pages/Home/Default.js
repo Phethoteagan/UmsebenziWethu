@@ -11,11 +11,11 @@ import painting from './painting.jpg'
 
 
 
-const Default: React.FC = () => {
+const Default = () => {
   const [apply1,setApply] = useState('APPLY HERE');
   const [apply2,setApply2] = useState('APPLY HERE');
   const [apply3,setApply3] = useState('APPLY HERE');
-  
+  // const [jobDescription, setJobDescription] = useState("");
   function Applied(){
     setApply('Applied!');
     alert("job application sent")
@@ -73,6 +73,7 @@ const Default: React.FC = () => {
        <IonRow>
       <IonCard color="light" className="flip-card">
          <IonCardContent className="flip-card-inner">
+         
               <div className="flip-card-front">
                 <IonImg src={cleaning} alt="Cleaning" ></IonImg>
                 <div className="caption">Domestic Work</div>
@@ -83,6 +84,13 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*Cleaner Needed (Westdene):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied()}><u>{apply1}</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>*Window Cleaner (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied2()}><u>{apply2}</u></button><br/>
                 </IonRow>
@@ -105,6 +113,15 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*Truck Plaugher(Alex):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          // value={jobDescription}
+          
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>* Cabbage Plantation (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
@@ -129,6 +146,13 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*Kitchen Plumber Needed (Soweto):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>*Leaking Bathroom fix (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
@@ -153,6 +177,13 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*Succulent Garden Fix (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>*Weed Remover (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
@@ -177,6 +208,13 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*3 year old to Babysit (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>*Home School 12yr old(Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
@@ -198,6 +236,13 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*House Painterin Need (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+                <IonButton
+          class="applyBtn"
+          color="secondary"
+          href="./pages/Dashboard"
+        >
+          Apply
+        </IonButton>
                 <IonRow>
                 <p>*Kitchen Renovator Needed (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
