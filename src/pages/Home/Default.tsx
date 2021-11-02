@@ -9,6 +9,7 @@ import babysitting from './babysitting.jpg'
 import painting from './painting.jpg'
 
 
+<<<<<<< Updated upstream
 
 
 const Default: React.FC = () => {
@@ -32,6 +33,9 @@ const Default: React.FC = () => {
 
   }
   
+=======
+const Default = () => {
+>>>>>>> Stashed changes
   const date = new Date()
   const hours = date.getHours()
   let timeOfDay
@@ -46,6 +50,7 @@ const Default: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+<<<<<<< Updated upstream
         <IonToolbar>
           {/* VERY IMPORTANT BUTTON */}
           <IonButtons slot="start">
@@ -205,6 +210,17 @@ const Default: React.FC = () => {
                 <IonRow>
                 <p>*Wall Builder Needed(Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+=======
+          <IonToolbar>
+            {/* VERY IMPORTANT BUTTON */}
+            <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
+            <IonTitle>
+              <div className='buttons'>
+              
+                <h1 className='welcome'>{timeOfDay}, Welcome To Umsebenzi Wethu</h1>
+>>>>>>> Stashed changes
               </div>
             </IonCardContent>
            
