@@ -13,7 +13,7 @@ import { useParams } from 'react-router';
 // import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 
-const Database = () => {
+const DatabaseMain = () => {
 
   const [searchText, setSearchText] = useState('');
   // current fellowshipId
@@ -42,8 +42,7 @@ const Database = () => {
 
   useEffect(async () => {
     var foundDiscussions = []
-    const dbQuery = query(collection(db, 'post'),
-      where("category", "==", category.category))
+    const dbQuery = query(collection(db, 'post'))
     const queryResults = await getDocs(dbQuery)
     
     queryResults.forEach((dis) => {
@@ -55,33 +54,6 @@ const Database = () => {
     })
     setPosts(foundDiscussions)
   },[])
-
-  function paste() {
-    const send = async () => {
-      var id = make(20);
-      var docData = {
-        jobtitle: jobTitle,
-        jobdescription: jobDescription,
-        jobcategory: jobCategory,
-        location: location,
-        category: category,
-        // photo: photo,
-        id: id,
-        adminEmail: userEmail,
-        appliedUsers: [],
-      };
-      await setDoc(doc(db, "post", id), docData)
-        .then((response) => {
-          alert("posted post", response);
-          /*setPage('3')  pass as props*/
-        })
-        .catch((error) => {
-          console.log("got it");
-          alert("error sham", error);
-        });
-    };
-    send();
-  }
 
   
 
@@ -148,7 +120,5 @@ const Database = () => {
   );
 };
 
-export default Database;
-
-
+export default DatabaseMain;
 

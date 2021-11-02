@@ -22,11 +22,13 @@
 .title{
     font-size: 20px;
     text-align: center;
+    
 }
 
 .cdTitle{
     font-size: 20px;
     text-align: center;
+    margin-top: 5%;
 }
 /* PROBLEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM !!!!!!!!!!! */
 
@@ -65,4 +67,7 @@
 .cameraIcon{
     margin-top:-35px;
     margin-left: 90px;
+}
+.postjob{
+    margin-top : -50%; 
 }

@@ -7,12 +7,17 @@ import plumbing from './plumbing.jpg'
 import gardening from './gardening.jpg'
 import babysitting from './babysitting.jpg'
 import painting from './painting.jpg'
+import { useHistory } from 'react-router';
+import UserProfile from '../userSession';
 
 
 const Default = () => {
   const [apply1,setApply] = useState('APPLY HERE');
   const [apply2,setApply2] = useState('APPLY HERE');
   const [apply3,setApply3] = useState('APPLY HERE');
+  console.log("logged user:",UserProfile.getName())
+  // router redirecter
+  const history = useHistory()
   // const [jobDescription, setJobDescription] = useState("");
   function Applied(){
     setApply('Applied!');
@@ -76,12 +81,18 @@ const Default = () => {
                 <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Dashboard"
-        >
-          Apply
-        </IonButton>
+                class="applyBtn"
+                color="secondary"
+                onClick={() => {history.push("../Dashboard/domestic")}}
+                >
+                  Apply
+                </IonButton>
+                <IonRow>
+                <p>*Window Cleaner (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied2()}><u>{apply2}</u></button><br/>
+                </IonRow>
+                <IonRow>
+                <p>*Laundry Services (Randburg):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied3()}><u>{apply3}</u></button><br/>
+                </IonRow>
               </div>
             </IonCardContent>
       </IonCard>
@@ -96,12 +107,11 @@ const Default = () => {
                 <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          // value={jobDescription}
-          
-          href="./pages/Dashboard"
-        >
+                  class="applyBtn"
+                  color="secondary"
+                  // value={jobDescription}
+                  onClick={() => {history.push("../Dashboard/farming")}}
+                >
           Apply
           </IonButton>
               </div>
@@ -120,9 +130,10 @@ const Default = () => {
                 <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Dashboard"
+                  class="applyBtn"
+                  color="secondary"
+                  href="./pages/Dashboard"
+                  onClick={() => {history.push("../Dashboard/plumbing")}}
         >
           Apply
         </IonButton>
@@ -143,9 +154,9 @@ const Default = () => {
                 <br></br>
                 
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Dashboard"
+                class="applyBtn"
+                color="secondary"
+                onClick={() => {history.push("../Dashboard/gardening")}}
         >
           Apply
         </IonButton>
@@ -166,9 +177,9 @@ const Default = () => {
                 <br></br>
                 
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Dashboard"
+                class="applyBtn"
+                color="secondary"
+                onClick={() => {history.push("../Dashboard/babysitting")}}
         >
           Apply
         </IonButton>
@@ -187,9 +198,9 @@ const Default = () => {
                 <br></br>
                 
                 <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Dashboard"
+                  class="applyBtn"
+                  color="secondary"
+                  onClick={() => {history.push("../Dashboard/construction")}}
         >
           Apply
         </IonButton>
