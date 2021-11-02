@@ -112,7 +112,7 @@ const Default = () => {
                   // value={jobDescription}
                   onClick={() => {history.push("../Dashboard/farming")}}
                 >
-          Apply
+        View job
           </IonButton>
               </div>
             </IonCardContent>
