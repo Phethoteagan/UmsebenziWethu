@@ -1,7 +1,7 @@
 import {  IonMenuButton,IonButtons,IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
 
-const Tab3: React.FC = () => {
+const Tab3 = () => {
   return (
     <IonPage>
       <IonHeader>

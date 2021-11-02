@@ -5,7 +5,9 @@ import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,
     IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
+import Database from '../Database.js'
 
+<<<<<<< HEAD:src/pages/Profile/Apply.tsx
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
@@ -29,6 +31,9 @@ const firebaseConfig = {
 };
 
 const Apply: React.FC = () => {
+=======
+const Apply = () => {
+>>>>>>> 9c0a43e54871647bf649fb87823c9df6d3b29f5d:src/pages/Profile/Apply.js
     const { photo, takePhoto} = usePhotoGallery();
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
@@ -105,6 +110,7 @@ const Apply: React.FC = () => {
             <IonButton class="jobs" color="danger">Approved</IonButton><br/>
             <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
             </IonContent>
+            
         </IonContent>
     </IonPage>
     )
