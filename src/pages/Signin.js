@@ -4,7 +4,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
 import {useRef} from 'react'
 import { auth } from '../firebaseConfig';
 import { useHistory } from "react-router-dom";
-import logo from './logo.jpg'
+import WhiteWethu from './WhiteWethu.jpg'
 
 
 
@@ -40,28 +40,27 @@ const Signin = () => {
       </IonHeader>
 
       <IonContent fullscreen>
-      <IonImg src={logo} className="logo"></IonImg>
-      < form className = "form">
-      <IonLabel>Email:</IonLabel><br></br>
-        <IonInput placeholder="Email" className="email" ref={emailRef}></IonInput>
+      <IonImg src={WhiteWethu} className="logo3"></IonImg>
+
+      <form className = "form2">
+      <IonLabel className="LblName">Email:</IonLabel><br></br>
+        <IonInput placeholder="Email" className="emaill" ref={emailRef}></IonInput>
+        <br/> <br/> 
+        <IonLabel className="LblName">Password:</IonLabel><br></br>
+        <IonInput type="password" placeholder="Password" className="password"  ref={passwordRef}></IonInput>
         <br/> <br/> 
 
-        <IonLabel>Password:</IonLabel><br></br>
-        <IonInput type="password" placeholder="Password" className="email"  ref={passwordRef}></IonInput>
-        <br/> <br/> 
-
-        <IonLabel>Confirm Password:</IonLabel><br></br>
-        <IonInput type="password" placeholder="Confirm Password" className="email" ></IonInput>
-        </form>
+        <IonLabel className="LblName">Confirm Password:</IonLabel><br></br>
+        <IonInput type="password" placeholder="Confirm Password" className="password" ></IonInput>
         <br/> <br/>
-
+        </form>
         <>
 
-        <IonButton  onClick={signUp}>Sign-In</IonButton>
+        <IonButton color="blue" className="LBtn" onClick={signUp}>Sign-In</IonButton>
         </>
 
         <p className="link">
-          Click <a href="./login">here</a> to return to the Login page
+          Return to <a href="./login">Login </a> 
         </p>
 
         <br></br>

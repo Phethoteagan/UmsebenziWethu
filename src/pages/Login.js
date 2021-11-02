@@ -8,11 +8,9 @@ import { useHistory } from "react-router-dom";
 
 
 import { useState } from 'react';
-import logo from './logo.jpg'
 import google from './google.png'
-import fingerprint from './fingerprint.png'
 import login from './login.png'
-import fprint from './FPrint.jpg'
+import WhiteWethu from './WhiteWethu.jpg'
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
@@ -74,24 +72,28 @@ import fprint from './FPrint.jpg'
       </IonHeader>
       <IonContent fullscreen className='ContentBlock'>
     
-        <IonImg src={logo} className="logo2"></IonImg>
+        <IonImg src={WhiteWethu} className="logo2"></IonImg>
 
-        <IonLabel className="LblName">Email:</IonLabel><br></br>
+        <form className="form1">
+        <IonLabel className="LblName">Username/Email:</IonLabel><br></br>
         <IonInput type="email" placeholder="Email" className="emaill" ref={emailRef}></IonInput>
         <br></br>
         
         <IonLabel className="LblName">Password:</IonLabel><br></br>
         <IonInput type="password" placeholder="Password" className="password" ref={passwordRef} ></IonInput>
         <br></br>
+        </form>
+
+        <IonButton color="blue" onClick={signIn}  className="LBtn" >Login <IonImg src={login} className="svgs" ></IonImg></IonButton>
         <br></br>
-        <IonButton color="blue" onClick={signIn}  className='LBtn' >Login <IonImg src={login} className="svgs" ></IonImg></IonButton>
-        <br></br>
-        <IonButton color="blue" className='LBtn' >Login with Google<IonImg src={google} className="svgs"></IonImg></IonButton>
+        <IonButton color="blue" className='button-Google' >Login with Google<IonImg src={google} className="svgs"></IonImg></IonButton>
         <br></br>
 
        
       <p className="NewAccount"> Don't have an account? Click <a href="./signin">here</a> to sign up </p>
         <p className="ForgotPassword">Forgot password?</p>
+
+      
       </IonContent>
 
     </IonPage>

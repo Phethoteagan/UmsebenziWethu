@@ -1,5 +1,5 @@
 .FHeader{
-    --ion-background-color: #073351;
+    --ion-background-color: #c5c8c9;
 }
 
 .TitleName{
@@ -12,18 +12,25 @@
 }
 
 .LblName{
-    font-size: 30px;
+    font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.button-Google{
+    width: 60%;
+    color: black;
+    background-color: #5ce1e6;;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: 20%;
 }
 
 .link1{
     text-align: center;
-}
-
-.logo2{
-    width: 60%;
-    height: 300px;
-    margin-left: 20%;
+    font-size: 20px;
+    color: #5ce1e6;
 }
 
 .svgs{
@@ -31,21 +38,19 @@
 }
 
 .emaill{
-    background-color: whitesmoke;
-    width: 70%;
-    margin-left: 15%;
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
     height: 45px;
-    border-radius: 10px;
-    border: solid black;
+    border: solid whitesmoke;
 }
 
 .password{
-    background-color: whitesmoke;
-    width: 70%;
+    background-color: white;
+    width: 90%;
     height: 45px;    
-    margin-left: 15%;
-    border-radius: 10px;
-    border: solid black;
+    margin-left: 5%;
+    border: solid whitesmoke
 }
 
 .Cpassword{
@@ -54,10 +59,6 @@
     height: 45px;   
     margin-left: 15%; 
     border-radius: 10px;
-}
-
-.NewAccount{
-    text-align: center;
 }
 
 .popup{
@@ -81,34 +82,35 @@
 
 .link{ 
     text-align: center;
+    color: #5ce1e6;
+    font-weight: bolder;
 }
 
 @keyframes wethuz {
-    0%   {width: 50%; margin-left: 25%}
+    0%   {width: 100%; margin-left: 0%;}
     25%  {width: 30%; margin-left: 35%}
-    50%  {width: 50%; margin-left: 25%}
+    50%  {width: 100%; margin-left: 0%;}
     75%  {width: 30%; margin-left: 35%}
-    100% {width: 50%; margin-left: 25%}
+    100% {width: 100%; margin-left: 0%;}
 }
   
 .WethuAnimation{
-    width: 50%;
-    height: 550px;
+    width: 100%;
+    height: 600px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
     padding: 0%;
     animation-name: wethuz;
     animation-duration: 25s;
-    margin-left: 25%;
-    animation-iteration-count: 5;
+    animation-iteration-count: 2s;
 }
 
 .card{
-    background-color: #5ce1e6;
+    background-color: #c5c8c9;
     width: 90%;
     margin-left: 5%;
-    margin-top: 10px;
+    margin-top: 100px;
     color: black;
     height: 230px;
     border-radius: 20px;
@@ -120,8 +122,8 @@
 
 .LBtn{
     width: 40%;
-    color: #5ce1e6;
-    background-color: #073351;
+    color: black;
+    background-color: #5ce1e6;
     margin-top: 10px;
     border-radius: 10px;
     margin-left: 30%;
@@ -130,10 +132,6 @@
     color: black;
 }
 
-.content{
-    font-size: 16pt;
-    margin-top: 20px;
-}
 ion-label{
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -155,12 +153,6 @@ ion-button{
 
 .form{
     border-radius: 50px;
-}
-
-.logo{
-    width: 50%;
-    height: 300px;
-    margin-left: 25%;
 }
 
 .svgs{
@@ -208,18 +200,78 @@ ion-button{
     background-color: #073351;
 }
 
-.logo1{
+/*logos*/
+.logo{
     width: 50%;
     height: 300px;
     margin-left: 25%;
 }
 
-.content {
+.logo1{
+    width: 50%;
+    height:auto;
+    margin-left: 25%;
+    border-radius: 1500%;
+    border: solid #c5c8c9 10px;
+    margin-top: 25px;
+}
+
+.logo2{
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 10px;
+    border-radius: 1500%;
+    border: solid #c5c8c9 10px;
+}
+
+.logo3{
+    width: 60%;
+    height:auto;
+    margin-left: 20%;
+    border-radius: 1500%;
+    border: solid #c5c8c9 10px;
+    margin-top: 25px;
+}
+.content1 {
     text-align: center;
+    border: #5ce1e6;
+    width: 90%;
+    height: 140px;
+    color: black;
+    background-color: #5ce1e6;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
 .ForgotPassword{
     text-align: center;
+    font-weight: bolder;
+    color: black;
 }
 
+.NewAccount{
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.form1{
+    background-color: rgb(235, 231, 231);
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form2{
+    background-color: rgb(235, 231, 231);
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 

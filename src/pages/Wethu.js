@@ -9,7 +9,7 @@ const Wethu = () => {
         <IonContent className='ContentBlock'>
         <IonImg src={WhiteWethu} className="WethuAnimation"></IonImg>
 
-        <div className="link1"><a href="./slider">Continue</a></div>
+        <div className="link1"><a href="./slider"> Continue>>> </a></div>
 
         </IonContent>
   

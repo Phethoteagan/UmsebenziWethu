@@ -9,8 +9,6 @@ import babysitting from './babysitting.jpg'
 import painting from './painting.jpg'
 
 
-
-
 const Default = () => {
   const [apply1,setApply] = useState('APPLY HERE');
   const [apply2,setApply2] = useState('APPLY HERE');
@@ -51,20 +49,16 @@ const Default = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>
-           
-           
 
+
+          <IonTitle className="defaultHeader">
             <div className='buttons'>
              
             <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
 
             </div>
-         
-
-
-
           </IonTitle>
+
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='background'>
@@ -79,11 +73,8 @@ const Default = () => {
                 <div className="caption">Domestic Work</div>
                 </div>
                 <div className="flip-card-back">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*Cleaner Needed (Westdene):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied()}><u>{apply1}</u></button><br/>
-                </IonRow>
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -91,12 +82,6 @@ const Default = () => {
         >
           Apply
         </IonButton>
-                <IonRow>
-                <p>*Window Cleaner (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied2()}><u>{apply2}</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Laundry Services (Randburg):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied3()}><u>{apply3}</u></button><br/>
-                </IonRow>
               </div>
             </IonCardContent>
       </IonCard>
@@ -108,11 +93,8 @@ const Default = () => {
                 <div className="caption2">Farming</div>
                 </div>
                 <div className="flip-card-back2">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*Truck Plaugher(Alex):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -121,13 +103,7 @@ const Default = () => {
           href="./pages/Dashboard"
         >
           Apply
-        </IonButton>
-                <IonRow>
-                <p>* Cabbage Plantation (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Watering Services (Randburg):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
+          </IonButton>
               </div>
             </IonCardContent>
       </IonCard>
@@ -141,11 +117,8 @@ const Default = () => {
                 <div className="caption3">Plumbing</div>
                 </div>
                 <div className="flip-card-back3">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*Kitchen Plumber Needed (Soweto):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -153,12 +126,6 @@ const Default = () => {
         >
           Apply
         </IonButton>
-                <IonRow>
-                <p>*Leaking Bathroom fix (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Toilet Plumber Needed (Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
               </div>
             </IonCardContent>
       </IonCard>
@@ -172,11 +139,9 @@ const Default = () => {
                 <div className="caption4">Gardening</div>
                 </div>
                 <div className="flip-card-back4">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*Succulent Garden Fix (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
+                
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -184,12 +149,6 @@ const Default = () => {
         >
           Apply
         </IonButton>
-                <IonRow>
-                <p>*Weed Remover (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Garden Watering(Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
               </div>
             </IonCardContent>
       </IonCard>
@@ -203,11 +162,9 @@ const Default = () => {
                 <div className="caption5">Nursery</div>
                 </div>
                 <div className="flip-card-back5">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*3 year old to Babysit (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
+                
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -215,15 +172,10 @@ const Default = () => {
         >
           Apply
         </IonButton>
-                <IonRow>
-                <p>*Home School 12yr old(Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Daycare Needed (Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
               </div>
             </IonCardContent>
       </IonCard>
+
       <IonCard color="light" className="flip-card6">
          <IonCardContent className="flip-card-inner6">
               <div className="flip-card-front6">
@@ -231,11 +183,9 @@ const Default = () => {
                 <div className="caption6">Construction</div>
                 </div>
                 <div className="flip-card-back6">
-                <h1 style={{color:'white'}}>Available Jobs In This Category: </h1>
+                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
-                <IonRow>
-                <p>*House Painterin Need (Melville):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
+                
                 <IonButton
           class="applyBtn"
           color="secondary"
@@ -243,12 +193,7 @@ const Default = () => {
         >
           Apply
         </IonButton>
-                <IonRow>
-                <p>*Kitchen Renovator Needed (Newtown):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Wall Builder Needed(Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
-                </IonRow>
+               
               </div>
             </IonCardContent>
            
