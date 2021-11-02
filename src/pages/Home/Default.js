@@ -1,4 +1,4 @@
-import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton,IonGrid, IonRow, IonCol, ViewLifeCycleManager} from '@ionic/react';
+import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent,IonGrid, IonRow, IonCol, ViewLifeCycleManager} from '@ionic/react';
 import { useState } from 'react';
 import './Default.css';
 import cleaning from './cleaning.jpg'
@@ -11,6 +11,7 @@ import { useHistory } from 'react-router';
 import UserProfile from '../userSession';
 
 
+<<<<<<< Updated upstream
 
 
 const Default = () => {
@@ -37,6 +38,9 @@ const Default = () => {
 
   }
   
+=======
+const Default = () => {
+>>>>>>> Stashed changes
   const date = new Date()
   const hours = date.getHours()
   let timeOfDay
@@ -51,6 +55,7 @@ const Default = () => {
   return (
     <IonPage>
       <IonHeader>
+<<<<<<< Updated upstream
         <IonToolbar>
           {/* VERY IMPORTANT BUTTON */}
           <IonButtons slot="start">
@@ -61,6 +66,7 @@ const Default = () => {
            
 
             <div className='buttons'>
+            
              
             <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
 
@@ -254,6 +260,17 @@ const Default = () => {
                 <IonRow>
                 <p>*Wall Builder Needed(Kempton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}}><u>APPLY HERE</u></button><br/>
                 </IonRow>
+=======
+          <IonToolbar>
+            {/* VERY IMPORTANT BUTTON */}
+            <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
+            <IonTitle>
+              <div className='buttons'>
+              
+                <h1 className='welcome'>{timeOfDay}, Welcome To Umsebenzi Wethu</h1>
+>>>>>>> Stashed changes
               </div>
             </IonCardContent>
            
