@@ -15,11 +15,8 @@ import { useLocation } from 'react-router-dom';
 import { informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, logOutOutline, logOutSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
 import './Menu.css';
 import logo from "../pages/logo.jpg";
-import UserProfile from '../pages/userSession';
-import {db} from '../firebaseConfig'
-import { useEffect, useState } from 'react';
-import {getDoc, collection, query, where} from 'firebase/firestore'
-import { getDocs } from '@firebase/firestore';
+
+
 
 // interface AppPage {
 //   url: string;
@@ -55,46 +52,22 @@ const appPages = [
   },
   {
     title: 'Logout',
-    url: '/Login',
+    url: '/pages/Login',
     iosIcon: logOutOutline,
     mdIcon: logOutSharp,
   },
 ];
 
-
-
-
 const Menu = () => {
   const location = useLocation();
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [photo, setPhoto] = useState('')
-  const email = UserProfile.getName().toString()
-
-  
-  console.log("current user:",email)
-  // you can also use it in profile to display use details
-  useEffect(async() => {
-    let userData = ""
-    const dbQuery = query(collection(db,"users"),
-          where("email", "==", email))
-    const queryResults = await getDocs(dbQuery)
-    queryResults.forEach((user) => {
-      userData = user.data();
-      // console.log("found jobs: ", job.data());
-    });
-    setFirstName(userData.firstName)
-    setLastName(userData.lastName)
-  },[])
 
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
-    
 
         <IonList id="inbox-list">
-          <IonListHeader>{firstName}  {lastName}</IonListHeader>
-          <IonNote>{email}</IonNote>
+          <IonListHeader>Umsebenzi Wethu</IonListHeader>
+          <IonNote>info@umsebenziwethu.co.za</IonNote>
           <img alt="" className= "logo" src={logo}/>
           {appPages.map((appPage, index) => {
             return (

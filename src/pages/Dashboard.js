@@ -13,10 +13,7 @@ const Dashboard = () => {
     <IonPage>
         <IonHeader>
             <IonToolbar>
-             {/* VERY IMPORTANT BUTTON */}
-            <IonButtons slot="start">
-                <IonMenuButton />
-            </IonButtons>
+                
                 <IonTitle>Dashboard</IonTitle>
             </IonToolbar>
         </IonHeader>

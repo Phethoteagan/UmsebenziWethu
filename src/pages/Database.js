@@ -7,7 +7,6 @@ import { IonItem, IonLabel, IonSearchbar, IonCard, } from '@ionic/react';
 import React, { useEffect, useState } from 'react';
 import { collection, docs, doc, getDocs, getDoc, limit, query, queryEqual, where } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
-import { useParams } from 'react-router';
 // import DisplayReplies from './Replys';
 // import AddReply from './addReply';
 // import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
@@ -17,7 +16,7 @@ const Database = () => {
 
   const [searchText, setSearchText] = useState('');
   // current fellowshipId
-  const category = useParams()
+  const fellowshipId = "tp"
   // set the selected reply
   const [selectedReply, setSelectedReply] = useState("")
   // set selected add reply
@@ -43,7 +42,7 @@ const Database = () => {
   useEffect(async () => {
     var foundDiscussions = []
     const dbQuery = query(collection(db, 'post'),
-      where("category", "==", category.category))
+      where("fellowshipId", "==", fellowshipId))
     const queryResults = await getDocs(dbQuery)
     
     queryResults.forEach((dis) => {
@@ -55,33 +54,6 @@ const Database = () => {
     })
     setPosts(foundDiscussions)
   },[])
-
-  function paste() {
-    const send = async () => {
-      var id = make(20);
-      var docData = {
-        jobtitle: jobTitle,
-        jobdescription: jobDescription,
-        jobcategory: jobCategory,
-        location: location,
-        category: category,
-        // photo: photo,
-        id: id,
-        adminEmail: userEmail,
-        appliedUsers: [],
-      };
-      await setDoc(doc(db, "post", id), docData)
-        .then((response) => {
-          alert("posted post", response);
-          /*setPage('3')  pass as props*/
-        })
-        .catch((error) => {
-          console.log("got it");
-          alert("error sham", error);
-        });
-    };
-    send();
-  }
 
   
 
@@ -97,7 +69,6 @@ const Database = () => {
 
 
         <div >
-         
           {console.log("List of posted jobs",posts)}
           {
             posts.map((post) => {
@@ -106,13 +77,13 @@ const Database = () => {
                   <IonCard className='posts' id={post.id} style={{transform:selectedReply==post.id?"scale(1.06)":"scale(1)"}}>
                     {/* fellewship discussions */}
                     {/* <img className='postImg' alt='profilePicture' src={post.userPic} /> */}
-                    <h3>{post.jobtitle} {post.jobDescription} </h3>
-                    <p className='date'>{post.jobtitle}</p>
+                    <h3>{post.jobTitle} {post.jobDescription}</h3>
+                    <p className='date'>{post.jobTitle}</p>
                     {/* <p className='content'>{post.text}</p> */}
                     <div id='postBtns'>
                       {/* {selectedReply != post.id && <button id='1' onClick={(e) => {(e,post.id) }}>View replies<MdKeyboardArrowDown size='20'/></button>}
                       {selectedReply == post.id && <button id='1' onClick={(e) => {(e,post.id) }}>Close replies<MdKeyboardArrowUp size='20'/></button>} */}
-                    <p >{post.jobtitle} {post.category} {post. jobcategory}</p>
+<p >{post.jobtittle} {post.Requredskills}</p>
                       <button onClick={(e) => { setAddReply(post.id); }}><h5>Apply</h5></button>
                     </div>
 

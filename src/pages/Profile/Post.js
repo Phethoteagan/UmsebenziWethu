@@ -25,32 +25,24 @@ import {
 import { personOutline, chevronDownOutline } from "ionicons/icons";
 import { camera } from "ionicons/icons";
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { auth } from "../../firebaseConfig";
 // import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, doc, addDoc } from "@firebase/firestore";
 import "firebase/firestore";
 // import { ellipsisVerticalSharp } from "ionicons/icons";
-import { setDoc, query, where, getDocs, getDoc } from "@firebase/firestore";
+import { setDoc } from "@firebase/firestore";
 import db from "../../firebaseConfig";
-import UserProfile from "../userSession";
-import DisplayJobs from "./displayJobs";
 
 const Post = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [jobCategory, setJobCategory] = useState("");
   const [location, setLocation] = useState("");
-  const [category, setCategory] = useState("");
+  const [requiredSkills, setRequiredSkills] = useState("");
   const { photo, takePhoto } = usePhotoGallery();
-  // current logged user email
-  const userEmail = UserProfile.getName();
-  // current logged user posted jobs
-  const [jobs, setJobs] = useState([]);
-  // specific job user data
-  const [userData, setUserData] = useState("");
-  var dummy = "";
+  const fellowshipId = "tp";
 
   function make(length) {
     var result = "";
@@ -67,17 +59,16 @@ const Post = () => {
     const send = async () => {
       var id = make(20);
       var docData = {
-        jobtitle: jobTitle,
+        jobtittle: jobTitle,
         jobdescription: jobDescription,
         jobcategory: jobCategory,
         location: location,
-        category: category,
+        Requredskills: requiredSkills,
         // photo: photo,
         id: id,
-        adminEmail: userEmail,
-        appliedUsers: [],
+        fellowshipId: fellowshipId,
       };
-      await setDoc(doc(db, "post", id), docData)
+      await setDoc(doc(db, requiredSkills, id), docData)
         .then((response) => {
           alert("posted post", response);
           /*setPage('3')  pass as props*/
@@ -89,23 +80,16 @@ const Post = () => {
     };
     send();
   }
-
-  useEffect(async () => {
-    // temporal storage fro jobDescription
-    var jobsArr = [];
-    console.log("use effect is running");
-    console.log("userEmail:", userEmail);
-    const dbQuery = query(
-      collection(db, "post"),
-      where("adminEmail", "==", userEmail)
-    );
-    const queryResults = await getDocs(dbQuery);
-    queryResults.forEach((job) => {
-      jobsArr.push(job.data());
-      console.log("found jobs: ", job.data());
-    });
-    setJobs(jobsArr);
-  }, []);
+  // function postInfo() {
+  // {addDoc(coll,{
+  //     "jobTitle": {jobTitle},
+  //     "jobDescription" : {jobDescription},
+  //     "jobCategory" : {jobCategory},
+  //     "location" : {location},
+  //     "requiredSkils":{requiredSkills},
+  //   })
+  //   alert("You have successfully posted a job");}
+  // }
 
   return (
     <IonPage>
@@ -190,58 +174,185 @@ const Post = () => {
               DROP DOWN 
               */}
 
-              <label for="job">Choose the Job Category:</label>
+              <label for="cars">Choose a trade:</label>
               <IonSelect
-                id="id"
-                value={category}
-                onIonChange={(e) => setCategory(e.target.value)}
+                id="cars"
+                value={requiredSkills}
+                onIonChange={(e) => setRequiredSkills(e.target.value)}
               >
-                <IonSelectOption value="domestic work">
-                  Domestic work
-                </IonSelectOption>
-                <IonSelectOption value="gardening">Gardening</IonSelectOption>
-                <IonSelectOption value="plumbing">Plumbing</IonSelectOption>
-                <IonSelectOption value="farming">farming</IonSelectOption>
-                <IonSelectOption value="babysitting">
-                  Baby sitting
-                </IonSelectOption>
-                <IonSelectOption value="construction">
-                  Construction
-                </IonSelectOption>
+                <IonSelectOption value="Domestic work">Domestic work</IonSelectOption>
+                <IonSelectOption value="Gardening">Gardening</IonSelectOption>
+                <IonSelectOption value="Plumbing">Plumbing</IonSelectOption>
+                <IonSelectOption value="Farming">farming</IonSelectOption>
+                <IonSelectOption value="Baby sitting">Baby sitting</IonSelectOption>
+                <IonSelectOption value="Construction">Construction</IonSelectOption>
               </IonSelect>
             </IonItem>
           </IonRow>
         </IonContent>
-        <IonButton className=" postjob" onClick={paste}>
-          Post Job
-        </IonButton>
+        <IonButton onClick={paste}>Post Job</IonButton>
         {/* <IonButton onClick={postInfo}>Post Job</IonButton> */}
         <IonTitle class="title">Applied Jobs</IonTitle>
         <br />
 
-        {jobs.map((job) => {
-          return(
-            <>
-              {
-                job.appliedUsers.map((user) => {
-                user = JSON.stringify(user);
-                let splitted = user.split(",");
-                let userId = splitted[0].split(":")[1];
-                let status = splitted[1]
-                  .split(":")[1]
-                  .replace("}", "")
-                  .replace('"', "");
-               return(
-                 <>
-                  <DisplayJobs userId={userId} status={status} />
-                 </>
-               )
-              })
-              }
-            </>
-          )
-        })}
-    
+        <IonButton class="jobs" color="success">
+          Rejected
+        </IonButton>
+        <IonButton class="jobs" color="medium">
+          Pending
+        </IonButton>
+        <IonButton class="jobs" color="medium">
+          Approved
+        </IonButton>
+        <br />
+        <IonButton class="jobDes" size="large">
+          <ul style={{ textAlign: "left" }}>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={personOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              Mikayla Mcunu
+            </ul>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={chevronDownOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              mmcunu12@gmail.com
+            </ul>
+          </ul>
+          <ul
+            style={{ textAlign: "left", marginRight: "105px", color: "black" }}
+          >
+            <li>Hard Worker</li>
+            <li>10 years experience</li>
+            <li>Communication skills</li>
+          </ul>
+        </IonButton>
+        <br />
+
+        <IonButton class="jobs" color="medium">
+          Rejected
+        </IonButton>
+        <IonButton class="jobs" color="warning">
+          Pending
+        </IonButton>
+        <IonButton class="jobs" color="medium">
+          Approved
+        </IonButton>
+        <br />
+        <IonButton class="jobDes" size="large">
+          <ul style={{ textAlign: "left" }}>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={personOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              Andile Marwala
+            </ul>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={chevronDownOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              amarwala2@gmail.com
+            </ul>
+          </ul>
+          <ul
+            style={{ textAlign: "left", marginRight: "105px", color: "black" }}
+          >
+            <li>Critical Think</li>
+            <li>5 years experience</li>
+            <li>N4 Plumbing</li>
+          </ul>
+        </IonButton>
+        <br />
+
+        <IonButton class="jobs" color="medium">
+          Rejected
+        </IonButton>
+        <IonButton class="jobs" color="medium">
+          Pending
+        </IonButton>
+        <IonButton class="jobs" color="danger">
+          Approved
+        </IonButton>
+        <br />
+        <IonButton class="jobDes" size="large">
+          <ul style={{ textAlign: "left" }}>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={personOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              Mikayla Mcunu
+            </ul>
+            <ul
+              style={{
+                color: "black",
+                paddingRight: "10px",
+                marginRight: "5px",
+              }}
+            >
+              {" "}
+              <IonIcon
+                slot="start"
+                icon={chevronDownOutline}
+                style={{ color: "white", paddingRight: "10px" }}
+              />
+              mmcunu12@gmail.com
+            </ul>
+          </ul>
+          <ul
+            style={{ textAlign: "left", marginRight: "105px", color: "black" }}
+          >
+            <li>Hard Worker</li>
+            <li>10 years experience</li>
+            <li>Airpot license</li>
+          </ul>
+        </IonButton>
+        <br />
       </IonContent>
     </IonPage>
   );
