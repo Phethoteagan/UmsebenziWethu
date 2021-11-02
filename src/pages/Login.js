@@ -13,6 +13,9 @@ import google from './google.png'
 import fingerprint from './fingerprint.png'
 import login from './login.png'
 import fprint from './FPrint.jpg'
+import UserProfile from './userSession';
+
+
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
@@ -46,10 +49,12 @@ import fprint from './FPrint.jpg'
         emailRef.current.value,
         passwordRef.current.value
     ).then(user => {
-        console.log(user)
-        alert(JSON.stringify('Login Successful'));
-        let path = `./pages/Home/Startup`; 
-        history.push(path);
+        // console.log(emailRef.current.value)
+        // alert(JSON.stringify('Login Successful'));
+        UserProfile.setName(emailRef.current.value);
+        // let path = "./pages/Home/Startup"; 
+        history.push("./pages/Home/Startup");
+        window.location.reload();
         
     }).catch(err => {
         console.log(err)

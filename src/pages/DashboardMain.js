@@ -3,9 +3,9 @@ import React from 'react';
 import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 
 
-import Database from './Database.js'
+import DatabaseMain from './DatabaseMain.js'
 
-const Dashboard = () => {
+const DashboardMain = () => {
    
 
 
@@ -27,10 +27,10 @@ const Dashboard = () => {
 
             
             
-            <Database />
+            <DatabaseMain />
         </IonContent>
     </IonPage>
     )
     };
 
-export default Dashboard
+export default DashboardMain;
