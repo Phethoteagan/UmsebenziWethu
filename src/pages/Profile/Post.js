@@ -110,7 +110,7 @@ const Post = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar className="post-toolbar">
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
@@ -118,21 +118,12 @@ const Post = () => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent>
+      <IonContent className="post-form-page">
         {/*-- Anchor --*/}
         {/* <IonButton href="#">Anchor</IonButton> */}
 
         {/*-- Colors --*/}
-        <IonButton
-          class="applyBtn"
-          color="secondary"
-          href="./pages/Profile/Apply"
-        >
-          Apply
-        </IonButton>
-        <IonButton class="postBtn" color="light">
-          Post
-        </IonButton>
+       
         <br />
         <IonTitle class="cdTitle">Company Details</IonTitle>
         {/* <img src="https://www.lifeisagarden.co.za/wp-content/uploads/2021/03/LIAG-Web-Banner-Feb-2021-385x426.jpg" alt=""  className="addImgIcon"/> */}

@@ -7,6 +7,7 @@ import { Redirect, Route } from 'react-router-dom';
 import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
+import Tab4 from './Tab4';
 
 
 
@@ -30,9 +31,14 @@ return (
             <Route path="/tab3">
                 <Tab3 />
             </Route>
+            <Route path="/tab4">
+                <Tab4 />
+            </Route>
+            
             <Route exact path="/">
                 <Redirect to="/tab1" />
             </Route>
+            
             </IonRouterOutlet>
             <IonTabBar slot="bottom" className='btab'>
             <IonTabButton tab="tab1" href="/tab1" className='btab'>
@@ -43,6 +49,9 @@ return (
             </IonTabButton>
             <IonTabButton tab="tab3" href="/tab3" className='btab'>
                 <IonLabel>Terms & Conditions</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab4" href="/tab4" className='btab'>
+                <IonLabel>Privacy Policy</IonLabel>
             </IonTabButton>
             </IonTabBar>
         </IonTabs>

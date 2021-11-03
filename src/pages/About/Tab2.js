@@ -27,18 +27,26 @@ const Tab2 = () => {
           
 
           <div className="contacts">
-            <br></br>On our email;
+            <br/>Contact us On our email;
             
-            <br></br> <IonImg src={email} className="contact-icons"/><IonLabel> umsebenziwethu@yahoo.com</IonLabel>
-            <br></br>or on our <IonImg src={whatsapp} className="contact-icons"/><IonLabel>whatApp @0656718717</IonLabel>
+            <p> umsebenziwethu@yahoo.com</p>
+            <IonImg src={email} className="contact-icons"/>
+            <p>whatApp @0656718717</p>
+            <IonImg src={whatsapp} className="contact-icons"/>
+            <p> or Tel. (011) - wethu</p>
 
-            <br></br>
-            <br></br> Be sure to engage with us on our social media platforms;
-            <a href="https://www.facebook.com"><IonImg src={facebook} className="contact-icons"/></a><IonLabel>@Umsebenzi Wethu</IonLabel>
+            <br/>
+            <br/> Be sure to engage with us on our social media platforms;
+            <p>@Umsebenzi Wethu</p>
+            <a href="https://www.facebook.com"><IonImg src={facebook} className="contact-icons"/></a>
+            
+            <p>@UmsebenziW</p>
             <a href="https://www.instagram.com"><IonImg src={instagram} className="contact-icons"/>
-            </a><IonLabel>@UmsebenziW</IonLabel>
+            </a>
+
+            <p> @UmsebenziW</p>
             <a href="https://twitter.com">  <IonImg src={twitter} className="contact-icons"/></a>
-            <IonLabel>@UmsebenziW</IonLabel>
+           
           </div>
         
         </IonContent>

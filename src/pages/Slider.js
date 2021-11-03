@@ -16,6 +16,8 @@ const Slider: React.FC = () => {
       
       <IonContent className='ContentBlock'>
       <IonImg src={WhiteWethu} className="logo1"></IonImg>
+
+      <p className="swipe"> Swipe right>>> </p>
         <IonSlides options={slide_options} >
           
           <IonSlide>

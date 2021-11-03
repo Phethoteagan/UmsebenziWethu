@@ -59,7 +59,9 @@ const Default = () => {
           <IonTitle className="defaultHeader">
             <div className='buttons'>
              
-            <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
+            <marquee direction="left" behavior="slide">
+              <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
+            </marquee>
 
             </div>
           </IonTitle>
@@ -85,14 +87,9 @@ const Default = () => {
                 color="secondary"
                 onClick={() => {history.push("../Dashboard/domestic")}}
                 >
-                  Apply
+                  View jobs
                 </IonButton>
-                <IonRow>
-                <p>*Window Cleaner (Sandton):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied2()}><u>{apply2}</u></button><br/>
-                </IonRow>
-                <IonRow>
-                <p>*Laundry Services (Randburg):</p><button style={{backgroundColor:'#013220', color:'dodgerblue'}} onClick={()=>Applied3()}><u>{apply3}</u></button><br/>
-                </IonRow>
+                
               </div>
             </IonCardContent>
       </IonCard>
@@ -112,7 +109,7 @@ const Default = () => {
                   // value={jobDescription}
                   onClick={() => {history.push("../Dashboard/farming")}}
                 >
-        View job
+        View jobs
           </IonButton>
               </div>
             </IonCardContent>
@@ -135,7 +132,7 @@ const Default = () => {
                   href="./pages/Dashboard"
                   onClick={() => {history.push("../Dashboard/plumbing")}}
         >
-          Apply
+          View jobs
         </IonButton>
               </div>
             </IonCardContent>
@@ -158,7 +155,7 @@ const Default = () => {
                 color="secondary"
                 onClick={() => {history.push("../Dashboard/gardening")}}
         >
-          Apply
+          View jobs
         </IonButton>
               </div>
             </IonCardContent>
@@ -181,7 +178,7 @@ const Default = () => {
                 color="secondary"
                 onClick={() => {history.push("../Dashboard/babysitting")}}
         >
-          Apply
+          View jobs
         </IonButton>
               </div>
             </IonCardContent>
@@ -202,7 +199,7 @@ const Default = () => {
                   color="secondary"
                   onClick={() => {history.push("../Dashboard/construction")}}
         >
-          Apply
+          View jobs
         </IonButton>
                
               </div>

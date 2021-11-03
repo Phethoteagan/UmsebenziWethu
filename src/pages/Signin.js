@@ -33,9 +33,9 @@ const Signin = () => {
   return (
     <IonPage>
 
-      <IonHeader>
+      <IonHeader className="FHeader">
           <IonToolbar>
-          <IonTitle>Sign-In</IonTitle>
+          <IonTitle className="TitleName">Sign-In</IonTitle>
           </IonToolbar>
       </IonHeader>
 

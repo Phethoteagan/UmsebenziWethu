@@ -26,9 +26,9 @@
 }
 
 .cdTitle{
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 /* PROBLEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM !!!!!!!!!!! */
 
@@ -65,9 +65,33 @@
 }
 
 .cameraIcon{
-    margin-top:-35px;
-    margin-left: 90px;
+    margin-top: -150px;
+    margin-left: 150px;
+    width: 150px;
+    height: 150px;
 }
 .postjob{
     margin-top : -50%; 
+}
+
+.apply-page{
+    --ion-background-color: #5ce1e6;
+}
+
+.apply-toolbar{
+    --ion-background-color: #c5c8c9;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.post-form-page{
+    --ion-background-color:#c5c8c9;
+}
+
+.post-toolbar{
+    --ion-background-color: #5ce1e6;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
 }

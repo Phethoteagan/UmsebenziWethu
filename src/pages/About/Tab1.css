@@ -1,5 +1,5 @@
 .body{
-    --ion-background-color:#013220;
+    --ion-background-color:#5ce1e6;
 }
 .name1{
     text-align: center;
@@ -9,6 +9,6 @@
     text-align: justify;
     margin-left: 5%;
     margin-right: 5%;
-    color:grey;
+    color: black;
     font-size: larger;
 }

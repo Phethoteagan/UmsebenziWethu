@@ -23,25 +23,16 @@ import UserProfile from './userSession';
   //import { getFirestore,collection,doc,addDoc} from '@firebase/firestore/lite';
   import "firebase/firestore";
   
-  
 
-  
 
 
   const Login = () => {
     
-  
-
-
-
-
-
 
    const emailRef = useRef(null);
    const passwordRef = useRef(null);
    const history = useHistory()
   
-   
 
    const signIn = e => {
     e.preventDefault();

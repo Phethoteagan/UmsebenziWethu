@@ -12,7 +12,7 @@ const Apply = () => {
     return (
     <IonPage>
         <IonHeader>
-            <IonToolbar>
+            <IonToolbar className="apply-toolbar">
                 {/* VERY IMPORTANT BUTTON */}
                 <IonButtons slot="start">
                     <IonMenuButton />
@@ -21,13 +21,12 @@ const Apply = () => {
             </IonToolbar>
         </IonHeader>
         
-        <IonContent >
+        <IonContent className="apply-page">
             {/*-- Anchor --*/}
             {/* <IonButton href="#">Anchor</IonButton> */}
 
             {/*-- Colors --*/}
-            <IonButton class="applyBtn" color="light">Apply</IonButton>
-            <IonButton class="postBtn" color="secondary" href="./pages/Profile/Post">Post</IonButton><br/>
+            
             <IonTitle class="cdTitle" >User Details</IonTitle>
 
             {/* <img src="https://static.vecteezy.com/system/resources/previews/002/002/247/non_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg" alt="" className="addImgIcon"/> */}

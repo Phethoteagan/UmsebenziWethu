@@ -14,7 +14,7 @@ import {
 import { useLocation } from 'react-router-dom';
 import { informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, logOutOutline, logOutSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
 import './Menu.css';
-import logo from "../pages/logo.jpg";
+import WhiteWethu from "../pages/WhiteWethu.jpg";
 import UserProfile from '../pages/userSession';
 import {db} from '../firebaseConfig'
 import { useEffect, useState } from 'react';
@@ -36,8 +36,14 @@ const appPages = [
     mdIcon: mailSharp
   },
   {
-    title: 'Profile',
+    title: 'User Info',
     url: '/pages/profile/apply',
+    iosIcon: personCircleOutline,
+    mdIcon: personCircleSharp
+  },
+  {
+    title: 'Admin',
+    url: '/pages/profile/post',
     iosIcon: personCircleOutline,
     mdIcon: personCircleSharp
   },
@@ -95,7 +101,7 @@ const Menu = () => {
         <IonList id="inbox-list">
           <IonListHeader>{firstName}  {lastName}</IonListHeader>
           <IonNote>{email}</IonNote>
-          <img alt="" className= "logo" src={logo}/>
+          <img alt="" className= "logo" src={WhiteWethu}/>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>

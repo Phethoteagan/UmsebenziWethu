@@ -315,46 +315,58 @@
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color: white;
+  font-weight: bolder;
 }
 .caption2 {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color: white;
+  font-weight: bolder;
 }
 .caption3 {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color: white;
+  font-weight: bolder;
 }
 .caption4 {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color: white;
+  font-weight: bolder;
 }
 .caption5 {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color: white;
+  font-weight: bolder;
 }
 .caption6 {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
   text-align: center;
   padding-top: 5px;
+  color:white;
+  font-weight: bolder;
 }
 .welcome {
   text-align: center;
