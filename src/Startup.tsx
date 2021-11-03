@@ -8,6 +8,8 @@ import Apply from './pages/Profile/Apply';
 import Post from './pages/Profile/Post';
 import About from './pages/About/About';
 import Default from './pages/Home/Default';
+import Dashboard from './pages/Dashboard';
+import DashboardMain from './pages/DashboardMain'
 
 
 const Startup: React.FC = () => {
@@ -35,6 +37,12 @@ const Startup: React.FC = () => {
             </Route>
             <Route path="/pages/Profile/Post" exact={true}>
               <Post/>
+            </Route>
+            <Route exact path="/pages/Dashboard/:category" >
+              <Dashboard/>
+            </Route>
+            <Route exact path="/pages/Dashboard" >
+              <DashboardMain />
             </Route>
             <Route path="/pages/About/About" exact={true}>
               <About/>

@@ -14,7 +14,7 @@
   --ion-border-radius: 50px;
 }
 .background {
-  --ion-background-color: #013220;
+  --ion-background-color: #5ce1e6;;
   margin-left: 80px;
 }
 .flip-card {
@@ -169,72 +169,72 @@
   backface-visibility: hidden;
 }
 .flip-card-front {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-front2 {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-front3 {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-front4 {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-front5 {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-front6 {
-  background-color: #013220;
+  background-color: #5ce1e6;
   color: black;
 }
 .flip-card-back {
-  background-color: #013220;
-  color: grey;
+  background-color: whitesmoke;
+  color: black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
   text-align: center;
 }
 .flip-card-back2 {
-  background-color: #013220;
-  color: grey;
+  background-color: whitesmoke;
+  color: black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
   text-align: center;
 }
 .flip-card-back3 {
-  background-color: #013220;
-  color: grey;
+  background-color: whitesmoke;
+  color: black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
   text-align: center;
 }
 .flip-card-back4 {
-  background-color: #013220;
-  color: grey;
+  background-color: whitesmoke;
+  color: black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
   text-align: center;
 }
 .flip-card-back5 {
-  background-color: #013220;
-  color: grey;
+  background-color: whitesmoke;
+  color: black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
   text-align: center;
 }
 .flip-card-back6 {
-  background-color: #013220;
-  color: grey;
+  background-color: white;
+  color:black;
   transform: rotateY(180deg);
   padding-top: 0px;
   padding-left: 30px;
@@ -243,7 +243,7 @@
 .Apply {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -252,7 +252,7 @@
 .Apply2 {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -261,7 +261,7 @@
 .Apply3 {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -269,7 +269,7 @@
 .Apply4 {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -277,7 +277,7 @@
 .Apply5 {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -285,7 +285,7 @@
 .Apply6 {
   border-radius: 15px;
   background-color: black;
-  color: #e0e0e0;
+  color: black;
   border-color: black;
   width: 80px;
   height: 20px;
@@ -309,7 +309,7 @@
   color: #bbb;
 }
 .caption {
-  background-color: dodgerblue;
+  background-color: #bbb;
   border-radius: 6px;
   margin-top: -8px;
   height: 30px;
@@ -359,4 +359,8 @@
 .welcome {
   text-align: center;
   color: grey;
+}
+
+.defaultHeader{
+  border-radius: 20px;
 }

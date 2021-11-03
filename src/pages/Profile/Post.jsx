@@ -89,7 +89,6 @@ const Post = () => {
                 </IonGrid>
 
             <IonContent className="camCont">
-                <IonRow class="item" >
                     <IonItem>
                         <IonLabel position= "floating">User Name </IonLabel><IonInput/>
                         <IonLabel position= "floating">Job title </IonLabel>
@@ -119,8 +118,7 @@ const Post = () => {
                         <IonInput value={requiredSkills} 
                         onIonChange={e => setRequiredSkills(e.detail.value)}/>
                     </IonItem>
-                    
-                </IonRow>
+
             </IonContent>
             <IonButton onClick={postInfo}>Post Job</IonButton>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>

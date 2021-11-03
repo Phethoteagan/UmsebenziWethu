@@ -3,6 +3,7 @@ import "./Style.css";
 import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
+import Database from '../Database.js'
 
 import { collection,addDoc} from '@firebase/firestore';
 import {db} from "../../firebaseConfig"
@@ -13,7 +14,8 @@ import {db} from "../../firebaseConfig"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
-const Apply= () => {
+
+const Apply = () => {
     const { photo, takePhoto} = usePhotoGallery();
 
   const [name,setName] = useState("");
@@ -116,6 +118,7 @@ const Apply= () => {
             <IonButton class="jobs" color="danger">Approved</IonButton><br/>
             <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
             </IonContent>
+            
         </IonContent>
     </IonPage>
     )
