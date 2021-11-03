@@ -5,15 +5,35 @@ import {  personOutline, chevronDownOutline} from 'ionicons/icons';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 import { useState } from 'react';
-import { auth, db } from '../../firebaseConfig';
-import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
-import { getFirestore,collection,doc,addDoc} from '@firebase/firestore';
-import "firebase/firestore";
-import { ellipsisVerticalSharp } from 'ionicons/icons';
 
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+import { getFirestore,collection,doc,addDoc} from '@firebase/firestore';
+import { ellipsisVerticalSharp } from 'ionicons/icons';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD6ENwMbXXjHvzTFdkxSD0izmj8CVffol0",
+  authDomain: "white-guy.firebaseapp.com",
+  databaseURL: "https://white-guy-default-rtdb.firebaseio.com",
+  projectId: "white-guy",
+  storageBucket: "white-guy.appspot.com",
+  messagingSenderId: "947399937368",
+  appId: "1:947399937368:web:c9422f04ceb51c1a02692d",
+  measurementId: "G-NJTYHST03S"
+};
 
 const Post = () => {
+    const { photo, takePhoto} = usePhotoGallery();
+
+    const app = initializeApp(firebaseConfig);
+    // const analytics = getAnalytics(app);
+    var db =getFirestore(app);
+
+    var coll=collection(db,"Company");
 
 
         const [jobTitle, setJobTitle] = useState("");
@@ -21,18 +41,18 @@ const Post = () => {
         const [jobCategory, setJobCategory] = useState("");
         const [location, setLocation] = useState("");
         const [requiredSkills, setRequiredSkills] = useState("");
-        const { photo, takePhoto} = usePhotoGallery();
+        // const { photo, takePhoto} = usePhotoGallery();
 
-        // function postInfo() {
-        // {addDoc(coll,{
-        //     "jobTitle": {jobTitle},
-        //     "jobDescription" : {jobDescription},
-        //     "jobCategory" : {jobCategory},
-        //     "location" : {location},
-        //     "requiredSkils":{requiredSkills},
-        //   })
-        //   alert("You have successfully posted a job");}
-        // }
+        function postInfo() {
+        {addDoc(coll,{
+            "jobTitle": {jobTitle},
+            "jobDescription" : {jobDescription},
+            "jobCategory" : {jobCategory},
+            "location" : {location},
+            "requiredSkils":{requiredSkills},
+          })
+          alert("You have successfully posted a job");}
+        }
       
     return(
     <IonPage>
@@ -71,35 +91,38 @@ const Post = () => {
             <IonContent className="camCont">
                 <IonRow class="item" >
                     <IonItem>
+                        <IonLabel position= "floating">User Name </IonLabel><IonInput/>
                         <IonLabel position= "floating">Job title </IonLabel>
                         <IonInput value={jobTitle}
-                        onIonChange={e => setJobTitle(e.target.value)}/>
+                        onIonChange={e => setJobTitle(e.detail.value)}/>
                     </IonItem><br/>
                     <IonItem>
+                        <IonLabel position= "floating">Surname</IonLabel><IonInput/>
                         <IonLabel position= "floating">Job description</IonLabel>
                         <IonInput value={jobDescription}
-                        onIonChange={e => setJobDescription(e.target.value)}/>
+                        onIonChange={e => setJobDescription(e.detail.value)}/>
                     </IonItem>
                     <IonItem>
                         <IonLabel position= "floating">Job category</IonLabel>
                         <IonInput value={jobCategory}
-                        onIonChange={e => setJobCategory(e.target.value)}/>
+                        onIonChange={e => setJobCategory(e.detail.value)}/>
                     </IonItem>
                     <IonItem>
+                        <IonLabel position= "floating">Skills </IonLabel><IonInput/>
                         <IonLabel position= "floating">Location</IonLabel>
                         <IonInput value={location}
-                        onIonChange={e => setLocation(e.target.value)}/>
+                        onIonChange={e => setLocation(e.detail.value)}/>
                     </IonItem>
                     <IonItem>
+                        <IonLabel position= "floating">Address </IonLabel><IonInput/>
                         <IonLabel position= "floating">Required skills</IonLabel>
                         <IonInput value={requiredSkills} 
-                        onIonChange={e => setRequiredSkills(e.target.value)}/>
+                        onIonChange={e => setRequiredSkills(e.detail.value)}/>
                     </IonItem>
                     
                 </IonRow>
             </IonContent>
-            <IonButton >Post Job</IonButton>
-            {/* <IonButton onClick={postInfo}>Post Job</IonButton> */}
+            <IonButton onClick={postInfo}>Post Job</IonButton>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>
 
             <IonButton class="jobs" color="success">Rejected</IonButton>
@@ -152,4 +175,4 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default Post

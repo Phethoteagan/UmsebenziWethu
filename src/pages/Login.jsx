@@ -46,9 +46,10 @@ import fprint from './FPrint.jpg'
         emailRef.current.value,
         passwordRef.current.value
     ).then(user => {
+      
         console.log(user)
         alert(JSON.stringify('Login Successful'));
-        let path = `./pages/Home/Startup`; 
+        let path = `./pages/Startup`; 
         history.push(path);
         
     }).catch(err => {
