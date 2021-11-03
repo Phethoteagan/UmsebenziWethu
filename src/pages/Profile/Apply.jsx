@@ -5,7 +5,6 @@ import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 import Database from '../Database.js'
 
-<<<<<<< HEAD:src/pages/Profile/Apply.jsx
 import { collection,addDoc} from '@firebase/firestore';
 import {db} from "../../firebaseConfig"
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,10 +14,8 @@ import {db} from "../../firebaseConfig"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
-const Apply= () => {
-=======
+
 const Apply = () => {
->>>>>>> f7b656e7ff6dbded069aa2233bbbddbfc90c8cc1:src/pages/Profile/Apply.js
     const { photo, takePhoto} = usePhotoGallery();
 
   const [name,setName] = useState("");
@@ -50,7 +47,7 @@ const Apply = () => {
     return (
     <IonPage>
         <IonHeader>
-            <IonToolbar className="apply-toolbar">
+            <IonToolbar>
                 {/* VERY IMPORTANT BUTTON */}
                 <IonButtons slot="start">
                     <IonMenuButton />
@@ -59,12 +56,13 @@ const Apply = () => {
             </IonToolbar>
         </IonHeader>
         
-        <IonContent className="apply-page">
+        <IonContent >
             {/*-- Anchor --*/}
             {/* <IonButton href="#">Anchor</IonButton> */}
 
             {/*-- Colors --*/}
-            
+            <IonButton class="applyBtn" color="light">Apply</IonButton>
+            <IonButton class="postBtn" color="secondary" href="./pages/Profile/Post">Post</IonButton><br/>
             <IonTitle class="cdTitle" >User Details</IonTitle>
 
             {/* <img src="https://static.vecteezy.com/system/resources/previews/002/002/247/non_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg" alt="" className="addImgIcon"/> */}

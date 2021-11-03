@@ -18,7 +18,7 @@ import WhiteWethu from "../pages/WhiteWethu.jpg";
 import UserProfile from '../pages/userSession';
 import {db} from '../firebaseConfig'
 import { useEffect, useState } from 'react';
-import {getDoc, collection, query, where} from 'firebase/firestore'
+import {getDoc, collection, query, where} from 'firebase/firestore';
 import { getDocs } from '@firebase/firestore';
 
 // interface AppPage {
