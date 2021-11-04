@@ -1,13 +1,10 @@
 import './Login.css';
 import { IonContent,IonModal, IonHeader, IonPage, IonTitle, IonToolbar, 
-  IonImg, IonLabel, IonButton, IonPopover, IonInput,useIonToast, IonToast} from '@ionic/react';
+  IonImg, IonLabel, IonButton, IonInput} from '@ionic/react';
 import React, { useState } from 'react';
 import {useRef} from 'react'
 import { auth } from '../firebaseConfig';
 import { useHistory } from "react-router-dom";
-import {db} from '../firebaseConfig'
-import { initializeApp } from "firebase/app";
-import { getFirestore,collection,doc,addDoc} from '@firebase/firestore';
 import "firebase/firestore";
 
 
@@ -36,18 +33,11 @@ const Signin = () => {
     })
   }
 
-
-
-
-
-
   const [password,setPassword] = useState("");
   const [confirm,setConfirm] = useState("");
 
 
   function reg() {
-
-    
 
     if( password!==confirm){
       alert(" passwords need to match");
@@ -74,7 +64,8 @@ const Signin = () => {
 
       <IonImg src="../assets/logo.jpg" className="logo"></IonImg>
       < form className = "form">
-
+      
+      
       <IonLabel>Email:</IonLabel><br></br>
         <IonInput placeholder="Email" className="email" ref={emailRef}></IonInput>
         <br/> <br/> 

@@ -1,11 +1,12 @@
 import React, {useState}from 'react';
 import "./Style.css";
-import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
+import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, 
+    IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 import Database from '../Database.js'
 
-<<<<<<< HEAD:src/pages/Profile/Apply.jsx
+
 import { collection,addDoc} from '@firebase/firestore';
 import {db} from "../../firebaseConfig"
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,10 +16,9 @@ import {db} from "../../firebaseConfig"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
-const Apply= () => {
-=======
+
 const Apply = () => {
->>>>>>> f7b656e7ff6dbded069aa2233bbbddbfc90c8cc1:src/pages/Profile/Apply.js
+
     const { photo, takePhoto} = usePhotoGallery();
 
   const [name,setName] = useState("");
@@ -126,4 +126,4 @@ const Apply = () => {
     )
     };
 
-export default Apply
+export default Apply;

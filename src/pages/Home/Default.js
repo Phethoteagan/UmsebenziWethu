@@ -1,4 +1,5 @@
-import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton,IonGrid, IonRow, IonCol, ViewLifeCycleManager} from '@ionic/react';
+import { IonMenuButton,IonButtons,IonImg,IonContent, IonHeader,
+   IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton,IonGrid, IonRow} from '@ionic/react';
 import { useState } from 'react';
 import './Default.css';
 import cleaning from './cleaning.jpg'
