@@ -5,7 +5,7 @@ import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 import Database from '../Database.js'
 
-<<<<<<< HEAD:src/pages/Profile/Apply.jsx
+
 import { collection,addDoc} from '@firebase/firestore';
 import {db} from "../../firebaseConfig"
 // TODO: Add SDKs for Firebase products that you want to use
@@ -16,9 +16,7 @@ import {db} from "../../firebaseConfig"
 
 
 const Apply= () => {
-=======
-const Apply = () => {
->>>>>>> f7b656e7ff6dbded069aa2233bbbddbfc90c8cc1:src/pages/Profile/Apply.js
+
     const { photo, takePhoto} = usePhotoGallery();
 
   const [name,setName] = useState("");

@@ -3,11 +3,11 @@ var UserProfile = (function() {
   
     var getName = function() {
 
-      return localStorage.getItem('userEmail');;    // Or pull this from cookie/localStorage
+      return localStorage.getItem('displayName','userEmail');;    // Or pull this from cookie/localStorage
     };
   
-    var setName = function(email) {
-      localStorage.setItem('userEmail', email);     
+    var setName = function(displayName,email) {
+      localStorage.setItem('displayName',displayName,'userEmail', email);     
       // Also set this in cookie/localStorage
     };
   
