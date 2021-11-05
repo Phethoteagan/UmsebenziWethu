@@ -1,13 +1,14 @@
-import React, {useState}from 'react';
+import React, {useState, useEffect}from 'react';
 import "./Style.css";
 import { IonImg ,IonIcon,IonFab,IonGrid,IonFabButton,IonRow,IonLabel,IonItem,IonInput,IonButton, IonContent, IonPage, IonTitle, IonMenuButton, IonButtons, IonHeader, IonToolbar } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { usePhotoGallery } from "../../hooks/usePhotoGallery";
 import Database from '../Database.js'
-
-
+import { personOutline, chevronDownOutline } from "ionicons/icons";
+import { setDoc, query, where, getDocs, getDoc } from "@firebase/firestore";
 import { collection,addDoc} from '@firebase/firestore';
 import {db} from "../../firebaseConfig"
+import UserProfile from './../userSession';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +24,8 @@ const Apply= () => {
   const [surname,setSurname] = useState("");
   const [skills,setSkills] = useState("");
   const [address,setAddress] = useState("");
+  // current logged user posted jobs
+  const [jobs, setJobs] = useState([]);
 
  function reg() {
 
@@ -44,6 +47,22 @@ const Apply= () => {
 
     
   }
+
+    useEffect(async () => {
+        var foundDiscussions = [];
+        const dbQuery = query(
+        collection(db, "appliedJobs"),
+        where("email", "==", UserProfile.getName())
+        );
+        const queryResults = await getDocs(dbQuery);
+
+        queryResults.forEach((dis) => {
+        var data = dis.data();
+        data["id"] = dis.id;
+        foundDiscussions.push(data);
+        });
+        setJobs(foundDiscussions);
+    }, []);
 
     return (
     <IonPage>
@@ -103,20 +122,32 @@ const Apply= () => {
             <IonButton onClick={()=>reg()}>Update Profile</IonButton>
             <IonTitle class="title">Applied Jobs</IonTitle><br/>
 
-            <IonButton class="jobs" color="success">Rejected</IonButton>
-            <IonButton class="jobs" color="medium">Pending</IonButton>
-            <IonButton class="jobs" color="medium">Approved</IonButton><br/>
-            <IonButton class="jobDes" size="large">Plumbing</IonButton><br/>
-
-            <IonButton class="jobs" color="medium">Rejected</IonButton>
-            <IonButton class="jobs" color="warning">Pending</IonButton>
-            <IonButton class="jobs" color="medium">Approved</IonButton><br/>
-            <IonButton class="jobDes" size="large">Database Admin</IonButton><br/>
-
-            <IonButton class="jobs" color="medium">Rejected</IonButton>
-            <IonButton class="jobs" color="medium">Pending</IonButton>
-            <IonButton class="jobs" color="danger">Approved</IonButton><br/>
-            <IonButton class="jobDes" size="large">Drone Admin</IonButton><br/>
+            {jobs.map((job) => {
+                return(
+                <>
+                {console.log("job here:",job)}
+                    <div>
+                        <div style={{display:'flex', justifyContent:"space-between"}}>
+                            <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'rejected'?"danger":""}>Rejected</IonButton>
+                            <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'pending'?"warning":""}>Pending</IonButton>
+                            <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'approved'?"success":""}>Approved</IonButton>
+                        </div>
+                        <IonButton style={{margin:"0px"}} class="jobDes" size="large">
+                        <ul style={{textAlign:"left"}}>
+                                <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={personOutline} style={{color:"white", paddingRight:"10px"}} />{job.name}</ul>
+                                <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={chevronDownOutline} style={{color:"white",  paddingRight:"10px"}} />{job.email}</ul>
+                        </ul>
+                            <ul style={{ textAlign:"left", marginRight:"105px", color:"black"}}>
+                                <li >{job.gender}</li>
+                                <li>{job.status}</li>
+                                <li>{job.email}</li>
+                            </ul>
+                        </IonButton><br/>
+                    </div>
+                </>
+                )
+            })
+        }
             </IonContent>
             
         </IonContent>

@@ -85,7 +85,14 @@ const DatabaseMain = () => {
                       {/* {selectedReply != post.id && <button id='1' onClick={(e) => {(e,post.id) }}>View replies<MdKeyboardArrowDown size='20'/></button>}
                       {selectedReply == post.id && <button id='1' onClick={(e) => {(e,post.id) }}>Close replies<MdKeyboardArrowUp size='20'/></button>} */}
                     <p >{post.jobtitle} {post.category} {post. jobcategory}</p>
-                      <button onClick={(e) => { setAddReply(post.id); }}><h5>Apply</h5></button>
+                    <button
+                      onClick={(e) => {
+                        let url = '/pages/Dashboard/job/'+post.id
+                        window.location.replace(url)
+                      }}
+                    >
+                      <h5>Apply</h5>
+                    </button>
                     </div>
 
                     {/* replies container */}

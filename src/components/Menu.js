@@ -77,8 +77,7 @@ const Menu = () => {
   const [photo, setPhoto] = useState('')
   const email = UserProfile.getName().toString()
 
-  
-  console.log("current user:",email)
+
   // you can also use it in profile to display use details
   useEffect(async() => {
     let userData = ""

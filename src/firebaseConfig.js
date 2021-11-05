@@ -47,3 +47,4 @@ export const createUserDocument = async (user, additionalData) => {
     }
   }
 };
+

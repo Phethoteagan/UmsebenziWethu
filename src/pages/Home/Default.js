@@ -129,7 +129,6 @@ const Default = () => {
                 <IonButton
                   class="applyBtn"
                   color="secondary"
-                  href="./pages/Dashboard"
                   onClick={() => {history.push("../Dashboard/plumbing")}}
         >
           View jobs
