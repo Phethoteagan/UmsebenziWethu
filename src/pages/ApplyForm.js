@@ -35,7 +35,8 @@ const Form = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [skills, setSkills] = useState("");
-  const [address, setAddress] = useState("");
+  const [job, setJob] = useState("");
+  const [jobT, setJobTitle] = useState("");
   const [number, setNumber] = useState("");
   const jobId = useParams();
   const userEmail = UserProfile.getName;
@@ -77,10 +78,14 @@ const Form = () => {
         status: "pending",
         email: UserProfile.getName(), //current logged user
         contactDetails: number, //current logged user
-        address: address, //form
+        job: job, //form
         gender: "male",
         jobId: jobId.jobId,
         adminEmail: adminEmail,
+        jobTitle:jobT,
+        
+
+      
       };
       await setDoc(doc(db, "appliedJobs", id), docData)
         .then((response) => {
@@ -110,23 +115,24 @@ const Form = () => {
           </IonItem>
           <br />
           <IonItem>
-            <IonLabel position="floating">Surname</IonLabel>
+            <IonLabel position="floating">Surname:</IonLabel>
             <IonInput
               onIonChange={(e) => setSurname(e.target.value)}
               required
             ></IonInput>
           </IonItem>
           <IonItem>
-            <IonLabel position="floating">Phone number </IonLabel>
+            <IonLabel position="floating">Phone number: </IonLabel>
             <IonInput
               onIonChange={(e) => setNumber(e.target.value)}
               required
+              maxlength="10"
             ></IonInput>
           </IonItem>
           <IonItem>
-            <IonLabel position="floating">Address </IonLabel>
+            <IonLabel position="floating">Job Title You intend to apply for under this category? </IonLabel>
             <IonInput
-              onIonChange={(e) => setAddress(e.target.value)}
+              onIonChange={(e) => setJobTitle(e.target.value)}
               required
             ></IonInput>
           </IonItem>
