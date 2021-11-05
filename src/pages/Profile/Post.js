@@ -91,21 +91,35 @@ const Post = () => {
   }
 
   useEffect(async () => {
-    // temporal storage fro jobDescription
-    var jobsArr = [];
-    console.log("use effect is running");
-    console.log("userEmail:", userEmail);
+    var foundDiscussions = [];
     const dbQuery = query(
-      collection(db, "post"),
+      collection(db, "appliedJobs"),
       where("adminEmail", "==", userEmail)
     );
     const queryResults = await getDocs(dbQuery);
-    queryResults.forEach((job) => {
-      jobsArr.push(job.data());
-      console.log("found jobs: ", job.data());
+
+    queryResults.forEach((dis) => {
+      var data = dis.data();
+      data["id"] = dis.id;
+      foundDiscussions.push(data);
     });
-    setJobs(jobsArr);
+    setJobs(foundDiscussions);
   }, []);
+
+  async function updateStatus(jobId, status){
+    console.log("passed id:", jobId)
+    const cityRef = db.collection('appliedJobs').doc(jobId);
+
+    // Set the 'capital' field of the city
+    const res = await cityRef.update({status: status})
+    .then((response) => {
+      alert("status updated")
+    })
+    .catch((err) => {
+      alert("err occured:",err.message)
+      console.log("error:", err)
+    })
+  }
 
   return (
     <IonPage>
@@ -158,13 +172,13 @@ const Post = () => {
                 onIonChange={(e) => setJobDescription(e.target.value)}
               />
             </IonItem>
-            <IonItem>
+            {/* <IonItem>
               <IonLabel position="floating">Job category</IonLabel>
               <IonInput
                 value={jobCategory}
                 onIonChange={(e) => setJobCategory(e.target.value)}
               />
-            </IonItem>
+            </IonItem> */}
             <IonItem>
               <IonLabel position="floating">Location</IonLabel>
               <IonInput
@@ -207,31 +221,30 @@ const Post = () => {
           Post Job
         </IonButton>
         {/* <IonButton onClick={postInfo}>Post Job</IonButton> */}
-        <IonTitle class="title">Applied Jobs</IonTitle>
+        <IonTitle class="title">Applicants History</IonTitle>
         <br />
-
-        {jobs.map((job) => {
-          return(
-            <>
-              {
-                job.appliedUsers.map((user) => {
-                user = JSON.stringify(user);
-                let splitted = user.split(",");
-                let userId = splitted[0].split(":")[1];
-                let status = splitted[1]
-                  .split(":")[1]
-                  .replace("}", "")
-                  .replace('"', "");
-               return(
-                 <>
-                  <DisplayJobs userId={userId} status={status} />
-                 </>
-               )
-              })
-              }
-            </>
-          )
-        })}
+        {
+          jobs.map((job) => {
+            return(
+              <>
+                <div>
+                  <div style={{display:'flex', justifyContent:"space-between"}}>
+                    <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'rejected'?"danger":""} onClick={() => updateStatus(job.id, 'rejected')}>Rejected</IonButton>
+                    <IonButton class="jobs" style={{margin:"0px"}}  color={job.status == 'pending'?"warning":""} onClick={() => updateStatus(job.id, 'pending')}>Pending</IonButton>
+                    <IonButton class="jobs" style={{margin:"0px"}}  color={job.status == 'approved'?"success":""} onClick={() => updateStatus(job.id, 'approved')}>Approved</IonButton>
+                  </div>
+                  <IonButton class="jobDes" style={{margin:"0px"}}  size="large">
+                  <ul style={{textAlign:"left"}}>
+                          <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={personOutline} style={{color:"white", paddingRight:"10px"}} />{job.name}</ul>
+                          <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={chevronDownOutline} style={{color:"white",  paddingRight:"10px"}} />{job.email}</ul>
+                          <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={chevronDownOutline} style={{color:"white",  paddingRight:"10px"}} />{job.title}</ul>
+                  </ul>
+                  </IonButton><br/>
+                </div>
+              </>
+            )
+          })
+        }
     
       </IonContent>
     </IonPage>

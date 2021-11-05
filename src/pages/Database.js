@@ -10,12 +10,13 @@ import {
   query,
   queryEqual,
   where,
-  setDoc
+  setDoc,
 } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import { useParams } from "react-router";
 import UserProfile from "./userSession";
 // import { setDoc } from "@firebase/firestore";
+import { useHistory } from "react-router";
 
 const Database = () => {
   const [searchText, setSearchText] = useState("");
@@ -29,6 +30,7 @@ const Database = () => {
   const [posts, setPosts] = useState([]);
   // form for adding replies
   // const [addComment, setAddComment] = useState(false);
+  const history = useHistory();
 
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
@@ -134,14 +136,14 @@ const Database = () => {
                     </p>
                     <button
                       onClick={(e) => {
-                        setAddReply(post.id);
+                        let url = "/pages/Dashboard/job/" + post.id;
+                        // setAddReply(post.id)
+                        window.location.replace(url);
                       }}
                     >
                       <h5>Apply</h5>
                     </button>
                   </div>
-
-                 
                 </IonCard>
               </>
             );

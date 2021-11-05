@@ -77,13 +77,13 @@ const Menu = () => {
   const [photo, setPhoto] = useState('')
   const email = UserProfile.getName().toString()
 
-  
-  console.log("current user:",email)
+
   // you can also use it in profile to display use details
   useEffect(async() => {
     let userData = ""
     const dbQuery = query(collection(db,"users"),
-          where("email", "==", email))
+          where("email", "==", email));
+
     const queryResults = await getDocs(dbQuery)
     queryResults.forEach((user) => {
       userData = user.data();
@@ -92,6 +92,11 @@ const Menu = () => {
     setFirstName(userData.firstName)
     setLastName(userData.lastName)
   },[])
+
+  function logOut(params) {
+    console.log("logged out")
+    window.location.replace("/login");
+  }
 
   return (
     <IonMenu contentId="main" type="overlay">
@@ -105,7 +110,9 @@ const Menu = () => {
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}
+                 onClick={() => appPage.title == 'Logout' ? logOut():""}
+                >
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
