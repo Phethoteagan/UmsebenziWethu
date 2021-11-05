@@ -83,7 +83,7 @@ const DisplayJobs = ({ userId, status }) => {
               icon={personOutline}
               style={{ color: "white", paddingRight: "10px" }}
             />
-            {user.firstName} {user.lastName}kjrfa:LJ?KVaSJKD
+            {user.firstName} {user.lastName}
           </ul>
           <ul
             style={{
@@ -101,17 +101,7 @@ const DisplayJobs = ({ userId, status }) => {
             {user.email}
           </ul>
         </ul>
-        <ul
-          style={{
-            textAlign: "left",
-            marginRight: "105px",
-            color: "black",
-          }}
-        >
-          <li>Critical Think</li>
-          <li>5 years experience</li>
-          <li>N4 Plumbing</li>
-        </ul>
+    
       </IonButton>
       <br />
     </>
