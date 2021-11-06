@@ -1,279 +1,221 @@
-.FHeader{
+.FHeader {
     --ion-background-color: #c5c8c9;
-}
-
-.TitleName{
+  }
+  
+  .TitleName {
     color: #5ce1e6;
-}
-
-.ContentBlock{
+    float: left;
+  }
+  
+  .ContentBlock {
     --ion-background-color: white;
-    --color: #5ce1e6;
-}
-
-.LblName{
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #5ce1e6;
+    margin-top: 50%;
+  }
+  
+  .LblName {
+    font-size: 22px;
     margin-top: 5px;
     margin-left: 5%;
-}
-
-.button-Google{
-    width: 60%;
-    color: black;
-    background-color: #5ce1e6;;
-    margin-top: 10px;
-    border-radius: 10px;
-    margin-left: 20%;
-}
-
-.link1{
+  }
+  
+  .link1 {
     text-align: center;
     font-size: 15px;
     color: black;
     font-weight: bolder;
-}
-
-.svgs{
-    width:40px;
-}
-
-.emaill{
+  }
+  
+  .inputs {
     background-color: white;
     width: 90%;
-    margin-left: 5%;
     height: 45px;
-    border: solid whitesmoke;
-}
-
-.password{
-    background-color: white;
-    width: 90%;
-    height: 45px;    
     margin-left: 5%;
-    border: solid whitesmoke
-}
-
-.Cpassword{
-    background-color: whitesmoke;
-    width: 70%;
-    height: 45px;   
-    margin-left: 15%; 
-    border-radius: 10px;
-}
-
-.popup{
-    width: 50%;
-    height:100px;
-    margin-left: 25%;
-}
-.popover-content{
-    --background: black;
-    width: 40%;
-    margin-left: 0% ;
-}
-
-.feedback{
-    color: yellowgreen;
-    font-weight: bolder;
-    text-align: center;
-    width: 40%;
-    margin-left: 15%;
-}
-
-.link{ 
+    border: solid whitesmoke;
+    color:#000000;
+  }
+  
+  .link {
     text-align: center;
     color: #5ce1e6;
     font-weight: bolder;
-}
-
-@keyframes wethuz {
-    0%   {width: 100%; margin-left: 0%;}
-    25%  {width: 30%; margin-left: 35%}
-    50%  {width: 100%; margin-left: 0%;}
-    75%  {width: 30%; margin-left: 35%}
-    100% {width: 100%; margin-left: 0%;}
-}
+  }
   
-.WethuAnimation{
+  @keyframes wethuz {
+    0% {
+      width: 100%;
+      margin-left: 0%;
+    }
+    /* 25%  {width: 50%; margin-left: 25%} */
+    50% {
+      width: 50%;
+      margin-left: 25%;
+    }
+    /* 75%  {width: 30%; margin-left: 35%} */
+    100% {
+      width: 100%;
+      margin-left: 0%;
+    }
+  }
+  
+  .WethuAnimation {
     width: 100%;
-    height: 600px;
+    height: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 20px;
     padding: 0%;
     animation-name: wethuz;
-    animation-duration: 25s;
+    animation-duration: 5s;
     animation-iteration-count: 2s;
-}
-
-.card{
+  }
+  
+  .card {
     background-color: #c5c8c9;
     width: 90%;
     margin-left: 5%;
-    margin-top: 100px;
+    margin-top: -5px;
     color: black;
-    height: 230px;
+    height: 250px;
     border-radius: 20px;
-}
-.title{
+  }
+  .title {
     margin-top: 40px;
     font-weight: 700;
-}
-
-.LBtn{
+  }
+  
+  .LBtn {
     width: 40%;
     color: black;
     background-color: #5ce1e6;
     margin-top: 10px;
     border-radius: 10px;
     margin-left: 30%;
-}
-.title {
+    margin-top: 15px;
+    font-weight: bolder;
+  }
+  .title {
     color: black;
-}
-
-ion-label{
+  }
+  
+  ion-label {
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     margin-left: 20%;
     color: black;
-}
-
-
-/*buttons*/
-ion-button{
-    height:40px;
-    width: 30%;
-    margin-left: 35%;
-    color:rgb(113, 239, 248);
-    font-weight: bold;
-    background-color: #073351;
-}
-
-
-.form{
+  }
+  
+  .form {
     border-radius: 50px;
-}
-
-.svgs{
-    width:20px;
-}
-
-.fingerb{
-    height:40px;
-    width: 40%;
-    margin-left: 30%;
-    color:rgb(113, 239, 248);
-    font-weight: bold;
-    background-color: #073351;
-
-}
-
-.email{
+  }
+  
+  .email {
     background-color: whitesmoke;
     width: 50%;
     height: 45px;
     margin-left: 25%;
     border-radius: 8px;
-}
-.skills{
+  }
+  .skills {
     height: 80px;
-    width:50%;
+    width: 50%;
     margin-left: 25%;
     border-radius: 8px;
-}
-
-
-.popover-content{
+  }
+  
+  .popover-content {
     --background: black;
     width: 40%;
-    margin-left: 7% ;
+    margin-left: 7%;
     align-content: center;
-}
-
-.button-LBtn{
-    height:40px;
+  }
+  
+  .button-LBtn {
+    height: 40px;
     width: 20%;
     margin-left: 40%;
     color: black;
     font-weight: bold;
     background-color: #073351;
-}
-
-/*logos*/
-.logo{
+  }
+  
+  /* /logos/ */
+  .logo {
     width: 50%;
     height: 300px;
     margin-left: 25%;
-}
-
-.logo1{
-    width: 50%;
-    height:auto;
-    margin-left: 25%;
-    margin-top: 25px;
-}
-
-.logo2{
+  }
+  
+  .logo1 {
+    width: 90%;
+    /* height: 90%; */
+    margin-left: 5%;
+    margin-bottom: -15%;
+    /* position: static;
+    bottom: 90px; */
+  }
+  
+  .logo2 {
+    width: 80%;
+    /* height: 70%; */
+    margin-left: 10%;
+    margin-top: -20px;
+  }
+  
+  .logo3 {
     width: 60%;
     height: auto;
     margin-left: 20%;
-    margin-top: 10px;
-}
-
-.logo3{
-    width: 60%;
-    height:auto;
-    margin-left: 20%;
     margin-top: 25px;
-}
-.content1 {
+  }
+  
+  .content1 {
     text-align: center;
     border: #5ce1e6;
     width: 90%;
-    height: 140px;
+    height: 170px;
     color: black;
     background-color: #5ce1e6;
     margin-left: 5%;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 20px;
-}
-
-.ForgotPassword{
+  }
+  
+  .ForgotPassword {
     text-align: center;
     font-weight: bolder;
     color: black;
-}
-
-.NewAccount{
+  }
+  
+  .NewAccount {
     text-align: center;
     font-weight: bolder;
     margin-left: 15%;
     margin-right: 15%;
-}
-
-
-.form1{
+    color: grey;
+  }
+  
+  .form1 {
     background-color: rgb(235, 231, 231);
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    padding-bottom:5%;
+    padding-top:5%;
+    margin-left: 5%;
     border-radius: 10px;
-    margin-top: 20px;
-}
-
-.form2{
-    background-color: rgb(235, 231, 231);
-    width: 80%;
-    margin-left: 10%;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.swipe{
+    /* margin-top: 20px; */
+  }
+  
+  .swipe {
     font-weight: bolder;
     text-align: center;
-}
-
-
-
+  }
+  
+  .splash {
+    background-color: white;
+  }
+  
+  /* #myDiv ion-img{
+      margin-top: -58px;
+  } */
+  
+  

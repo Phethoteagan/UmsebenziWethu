@@ -132,7 +132,7 @@ const Apply= () => {
                             <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'pending'?"warning":""}>Pending</IonButton>
                             <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'approved'?"success":""}>Approved</IonButton>
                         </div>
-                        <IonButton style={{margin:"0px"}} class="jobDes" size="large">
+                        <IonButton style={{marginleft:"-50px"}} class="jobDes" size="large">
                         <ul style={{textAlign:"left"}}>
                                 <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={personOutline} style={{color:"white", paddingRight:"10px"}} />{job.name}</ul>
                                 <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={chevronDownOutline} style={{color:"white",  paddingRight:"10px"}} />{job.email}</ul>

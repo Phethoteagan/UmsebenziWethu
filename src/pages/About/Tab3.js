@@ -10,12 +10,12 @@ const Tab3 = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle className='name3'>Terms & Conditions</IonTitle>
+          <IonTitle className='name3'><u>Terms & Conditions</u></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='body'>
         <p className='content3'>
-        <h3>Terms and conditions of use...</h3>
+        <h3><u>Terms and conditions of use...</u></h3>
 Any person accessing this website (user) is subject to, and agrees to, the terms and conditions set out in this legal notice. If the user does not wish to be bound by these terms and conditions, the user may not access, display, use, download and/or otherwise copy or distribute content obtained on this website.
 
 <h6>Usage and copyright</h6>

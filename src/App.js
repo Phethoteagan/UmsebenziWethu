@@ -37,14 +37,15 @@ const App = () => (
         <Startup />
 
         <Route path="/" exact={true}>
-          <Wethu />
+          {/* <Wethu /> */}
+          <Slider />
           {/* setTimeout(function(){<Redirect to="/slider" />}, 50000); */}
         </Route>
 
-        <Route path="/slider">
+        {/* <Route path="/slider">
           <Slider />
           {/* <Post /> */}
-        </Route>
+        {/* </Route>  */}
 
         <Route path="/login">
           <Login />

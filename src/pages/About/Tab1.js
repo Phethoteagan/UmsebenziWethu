@@ -1,5 +1,6 @@
 import { IonMenuButton,IonButtons,IonTitle,IonToolbar,IonContent, IonHeader, IonPage} from '@ionic/react';
 import './Tab1.css';
+import gif from "./Jobgif.mp4";
 
 const Tab1 = () => {
   return (
@@ -14,6 +15,7 @@ const Tab1 = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='body'>
+      <video className='gif' src={gif} alt ="gif"/>
         <p className='content'>
         South Africa has one of the highest unemployment rates in the world, and this is not out of laziness but out of lack of resources. A number of people are struggling with find jobs, some are struggling to find people who would be suitable to cater to their household needs and an even higher number of people are having problems with acquiring suppliers for either the own personal needs or even for their companies. With all these problems stated an even bigger issue is not having the platform to communicate with potential employees/employers. 
         <br/><h6><b>Solution</b></h6> <br/>

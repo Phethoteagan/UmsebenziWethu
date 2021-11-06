@@ -12,9 +12,9 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, logOutOutline, logOutSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
+import {desktopSharp,desktopOutline,informationOutline,informationSharp,archiveOutline, archiveSharp, heartOutline, heartSharp, mailOutline, mailSharp, logOutOutline, logOutSharp, personCircleOutline, personCircleSharp,} from 'ionicons/icons';
 import './Menu.css';
-import WhiteWethu from "../pages/WhiteWethu.jpg";
+import greyWethu from "../img/greyWethu.jpeg";
 import UserProfile from '../pages/userSession';
 import {db} from '../firebaseConfig'
 import { useEffect, useState } from 'react';
@@ -36,22 +36,22 @@ const appPages = [
     mdIcon: mailSharp
   },
   {
-    title: 'User Info',
+    title: 'My Profile',
     url: '/pages/profile/apply',
     iosIcon: personCircleOutline,
     mdIcon: personCircleSharp
   },
   {
-    title: 'Admin',
+    title: 'Post a Job',
     url: '/pages/profile/post',
-    iosIcon: personCircleOutline,
-    mdIcon: personCircleSharp
+    iosIcon: archiveOutline,
+    mdIcon: archiveSharp
   },
   {
     title: 'Dashboard',
     url: '/pages/dashboard',
-    iosIcon: personCircleOutline,
-    mdIcon: personCircleSharp
+    iosIcon: desktopOutline,
+    mdIcon: desktopSharp
   },
   {
     title: 'About',
@@ -72,11 +72,10 @@ const appPages = [
 
 const Menu = () => {
   const location = useLocation();
-  const [firstName, setFirstName] = useState('')
+  const [displayName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [photo, setPhoto] = useState('')
+  //const [photo, setPhoto] = useState('')
   const email = UserProfile.getName().toString()
-
 
   // you can also use it in profile to display use details
   useEffect(async() => {
@@ -88,8 +87,9 @@ const Menu = () => {
     queryResults.forEach((user) => {
       userData = user.data();
       // console.log("found jobs: ", job.data());
+      console.log(user.displayName)
     });
-    setFirstName(userData.firstName)
+    setFirstName(userData.displayName)
     setLastName(userData.lastName)
   },[])
 
@@ -104,14 +104,14 @@ const Menu = () => {
     
 
         <IonList id="inbox-list">
-          <IonListHeader>{firstName}  {lastName}</IonListHeader>
-          <IonNote>{email}</IonNote>
-          <img alt="" className= "logo" src={WhiteWethu}/>
+          <IonListHeader>{displayName} {lastName}</IonListHeader>
+          <IonNote className="header">{email}</IonNote>
+          <img alt="" className= "logo" src={greyWethu}/>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}
-                 onClick={() => appPage.title == 'Logout' ? logOut():""}
+                  onClick={() => appPage.title == 'Logout' ? logOut():""}
                 >
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>

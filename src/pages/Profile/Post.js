@@ -79,7 +79,7 @@ const Post = () => {
       };
       await setDoc(doc(db, "post", id), docData)
         .then((response) => {
-          alert("posted post", response);
+          alert("Job posted successfully", response);
           /*setPage('3')  pass as props*/
         })
         .catch((error) => {
@@ -154,7 +154,7 @@ const Post = () => {
             </IonFabButton>
           </IonFab>
         </IonGrid>
-
+        
         <IonContent className="camCont">
           <IonRow class="item">
             <IonItem>
@@ -227,13 +227,13 @@ const Post = () => {
           jobs.map((job) => {
             return(
               <>
-                <div>
+                <div className="Status">
                   <div style={{display:'flex', justifyContent:"space-between"}}>
-                    <IonButton class="jobs" style={{margin:"0px"}} color={job.status == 'rejected'?"danger":""} onClick={() => updateStatus(job.id, 'rejected')}>Rejected</IonButton>
-                    <IonButton class="jobs" style={{margin:"0px"}}  color={job.status == 'pending'?"warning":""} onClick={() => updateStatus(job.id, 'pending')}>Pending</IonButton>
-                    <IonButton class="jobs" style={{margin:"0px"}}  color={job.status == 'approved'?"success":""} onClick={() => updateStatus(job.id, 'approved')}>Approved</IonButton>
+                    <IonButton class="jobs" style={{margin:"5px"}} color={job.status == 'rejected'?"danger":""} onClick={() => updateStatus(job.id, 'rejected')}>Rejected</IonButton>
+                    <IonButton class="jobs" style={{margin:"5px"}}  color={job.status == 'pending'?"warning":""} onClick={() => updateStatus(job.id, 'pending')}>Pending</IonButton>
+                    <IonButton class="jobs" style={{margin:"5px"}}  color={job.status == 'approved'?"success":""} onClick={() => updateStatus(job.id, 'approved')}>Approved</IonButton>
                   </div>
-                  <IonButton class="jobDes" style={{margin:"0px"}} size="large">
+                  <IonButton class="jobDes" style={{marginleft:"-50px"}} size="large">
                   <ul style={{textAlign:"left"}}>
                           <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={personOutline} style={{color:"white", paddingRight:"10px"}} />{job.name}</ul>
                           <ul style={{color:"black", paddingRight:"10px", marginRight:"5px"}}> <IonIcon slot="start" icon={chevronDownOutline} style={{color:"white",  paddingRight:"10px"}} />{job.email}</ul>

@@ -8,16 +8,31 @@ const slide_options={
   speed:400,
 };
 
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 6000);
+}
 
-const Slider: React.FC = () => {
+function showPage() {
+  document.getElementById("load").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+const Slider = () => {
+  
   return (
-    <IonPage>
-      
-      <IonContent className='ContentBlock'>
-      <IonImg src={WhiteWethu} className="logo1"></IonImg>
+    <IonPage className="splash" onload={myFunction()}>
+      <div  id='load'>
+        <IonImg   src={WhiteWethu} className="WethuAnimation"> </IonImg>
+        </div>
+     
+      <IonContent id="myDiv" className='ContentBlock'>
+        {/* GIF goe here  */}
+      {/* <p className="swipe"> Swipe right </p> */}
+      <br/>
+        <IonImg src={WhiteWethu} className="logo1"></IonImg>
 
-      <p className="swipe"> Swipe right>>> </p>
+        <p className="swipe"> Swipe right </p>
         <IonSlides options={slide_options} >
           
           <IonSlide>
@@ -62,8 +77,8 @@ const Slider: React.FC = () => {
 
         </IonSlides>
 
-        <IonButton color="#5ce1e6" href="./login" className='LBtn'>Skip>>></IonButton>
-        </IonContent>
+        <IonButton color="#5ce1e6" href="./login" className='LBtn'>Skip</IonButton>
+      </IonContent>
     </IonPage>
   );
 };

@@ -7,6 +7,7 @@ import plumbing from './plumbing.jpg'
 import gardening from './gardening.jpg'
 import babysitting from './babysitting.jpg'
 import painting from './painting.jpg'
+import corporation from './corporation.jpg'
 import { useHistory } from 'react-router';
 import UserProfile from '../userSession';
 
@@ -48,8 +49,8 @@ const Default = () => {
   }
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
+      <IonHeader >
+        <IonToolbar className="apply-toolbar" >
           {/* VERY IMPORTANT BUTTON */}
           <IonButtons slot="start">
             <IonMenuButton />
@@ -59,9 +60,9 @@ const Default = () => {
           <IonTitle className="defaultHeader">
             <div className='buttons'>
              
-            <marquee direction="left" behavior="slide">
-              <h1 className='welcome'>{timeOfDay} Welcome To Umsebenzi Wethu</h1>
-            </marquee>
+            {/* <marquee direction="left" behavior="slide"> */}
+              <h5 className='welcome'>{timeOfDay} Welcome <br/>To Umsebenzi Wethu</h5>
+            {/* </marquee> */}
 
             </div>
           </IonTitle>
@@ -80,7 +81,7 @@ const Default = () => {
                 <div className="caption">Domestic Work</div>
                 </div>
                 <div className="flip-card-back">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <h1 className="Heading" style={{color:'black', fontWeight:"bold", marginTop:"25%"}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
                 class="applyBtn"
@@ -94,14 +95,14 @@ const Default = () => {
             </IonCardContent>
       </IonCard>
      
-      <IonCard color="light" className="flip-card2">
-         <IonCardContent className="flip-card-inner2">
-              <div className="flip-card-front2">
+      <IonCard color="light" className="flip-card">
+         <IonCardContent className="flip-card-inner">
+              <div className="flip-card-front">
                 <img src={farming} alt="farming" width='600px' height='232px'></img>
-                <div className="caption2">Farming</div>
+                <div className="caption">Agriculture</div>
                 </div>
-                <div className="flip-card-back2">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <div className="flip-card-back">
+                <h1 className="Heading" style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
                   class="applyBtn"
@@ -117,18 +118,19 @@ const Default = () => {
       </IonRow>
 
       <IonRow>
-      <IonCard color="light" className="flip-card3">
-         <IonCardContent className="flip-card-inner3">
-              <div className="flip-card-front3">
+      <IonCard color="light" className="flip-card">
+         <IonCardContent className="flip-card-inner">
+              <div className="flip-card-front">
                 <img src={plumbing} alt="plumbing" ></img>
-                <div className="caption3">Plumbing</div>
+                <div className="caption">Plumbing</div>
                 </div>
-                <div className="flip-card-back3">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <div className="flip-card-back">
+                <h1 className="Heading" style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 <IonButton
                   class="applyBtn"
                   color="secondary"
+                  href="./pages/Dashboard"
                   onClick={() => {history.push("../Dashboard/plumbing")}}
         >
           View jobs
@@ -139,14 +141,14 @@ const Default = () => {
      
       <IonRow>
     
-      <IonCard color="light" className="flip-card4">
-         <IonCardContent className="flip-card-inner4">
-              <div className="flip-card-front4">
-                <img src={gardening} alt="gardening" height='240px' ></img>
-                <div className="caption4">Gardening</div>
+      <IonCard color="light" className="flip-card">
+         <IonCardContent className="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={corporation} alt="corporation" height='240px' width='345px'></img>
+                <div className="caption">Corporation</div>
                 </div>
-                <div className="flip-card-back4">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <div className="flip-card-back">
+                <h1 className="Heading" style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 
                 <IonButton
@@ -162,14 +164,14 @@ const Default = () => {
       </IonRow>
 
       <IonRow>
-      <IonCard color="light" className="flip-card5">
-         <IonCardContent className="flip-card-inner5">
-              <div className="flip-card-front5">
+      <IonCard color="light" className="flip-card">
+         <IonCardContent className="flip-card-inner">
+              <div className="flip-card-front">
                 <img src={babysitting} alt="babysitting" height='240px'></img>
-                <div className="caption5">Nursery</div>
+                <div className="caption">Nursery</div>
                 </div>
-                <div className="flip-card-back5">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <div className="flip-card-back">
+                <h1 className="Heading" style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 
                 <IonButton
@@ -183,14 +185,14 @@ const Default = () => {
             </IonCardContent>
       </IonCard>
 
-      <IonCard color="light" className="flip-card6">
-         <IonCardContent className="flip-card-inner6">
-              <div className="flip-card-front6">
+      <IonCard color="light" className="flip-card">
+         <IonCardContent className="flip-card-inner">
+              <div className="flip-card-front">
                 <img src={painting} alt="painting" ></img>
-                <div className="caption6">Construction</div>
+                <div className="caption">Construction</div>
                 </div>
-                <div className="flip-card-back6">
-                <h1 style={{color:'black'}}>Available Jobs In This Category: </h1>
+                <div className="flip-card-back">
+                <h1 className="Heading" style={{color:'black'}}>Available Jobs In This Category: </h1>
                 <br></br>
                 
                 <IonButton

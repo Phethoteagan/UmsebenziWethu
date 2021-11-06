@@ -102,8 +102,20 @@ const Form = () => {
   }
 
   return (
+  
     <>
-      <h1>Job application form</h1>
+    <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
+    
+    <IonPage id= "page">
+      <IonHeader className='FHeader'>
+          <IonToolbar>
+            <IonTitle className="TitleName"><u>Job application form</u></IonTitle>
+          </IonToolbar>
+         </IonHeader>
+         
+         <IonContent className ="formjob">
       <IonRow class="item">
         <form action="">
           <IonItem>
@@ -130,7 +142,7 @@ const Form = () => {
             ></IonInput>
           </IonItem>
           <IonItem>
-            <IonLabel position="floating">Job Title You intend to apply for under this category? </IonLabel>
+            <IonLabel position="floating">Job Title </IonLabel>
             <IonInput
               onIonChange={(e) => setJobTitle(e.target.value)}
               required
@@ -146,6 +158,8 @@ const Form = () => {
           </IonButton>
         </form>
       </IonRow>
+      </IonContent>
+      </IonPage>
     </>
   );
 };

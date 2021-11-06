@@ -11,7 +11,7 @@ import Tab4 from './Tab4';
 
 
 
-const About: React.FC = () => {
+const About = () => {
 return (
     <IonApp>
         <Tab1/>

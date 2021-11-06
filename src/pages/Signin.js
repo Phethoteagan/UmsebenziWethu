@@ -1,4 +1,4 @@
-import './Login.css';
+import './Signin.css';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
   IonImg, IonLabel, IonButton, IonPopover, IonInput,useIonToast, IonToast} from '@ionic/react';
 import {useRef} from 'react'
@@ -53,7 +53,7 @@ class Signin extends Component {
             value={displayName}
             onChange={this.handleChange}
             // placeholder="Name"
-            className="emaill"
+            className="input-signin"
           />
           <IonLabel className="LblName">Surname:</IonLabel><br></br>
           <input
@@ -62,7 +62,7 @@ class Signin extends Component {
             value={surname}
             onChange={this.handleChange}
             // placeholder="Name"
-            className="emaill"
+            className="input-signin"
           />
           <IonLabel className="LblName">Date of Birth:</IonLabel><br></br>
           <input
@@ -71,7 +71,7 @@ class Signin extends Component {
             value={dateOfBirth}
             onChange={this.handleChange}
             // placeholder="Name"
-            className="emaill"
+            className="input-signin"
           />
           <IonLabel className="LblName">Contact Details:</IonLabel><br></br>
           <input
@@ -80,7 +80,7 @@ class Signin extends Component {
             value={phoneNumber}
             onChange={this.handleChange}
             // placeholder="Name"
-            className="emaill"
+            className="input-signin"
           />
           <IonLabel className="LblName">Email:</IonLabel><br></br>
           <input
@@ -89,7 +89,7 @@ class Signin extends Component {
             value={email}
             onChange={this.handleChange}
             // placeholder="Email"
-            className="emaill"
+            className="input-signin"
           />
           <IonLabel className="LblName">Password:</IonLabel><br></br>
           <input
@@ -98,7 +98,7 @@ class Signin extends Component {
             value={password}
             onChange={this.handleChange}
             // placeholder="Password"
-            className="password"
+            className="input-signin"
           />
           <IonLabel className="LblName">Confirm Password:</IonLabel><br></br>
           <input
@@ -107,11 +107,11 @@ class Signin extends Component {
             value={confirmPassword}
             onChange={this.handleChange}
             // placeholder="Password"
-            className="password"
+            className="input-signin"
           />
 
         </form>
-        <IonButton  onClick={this.handleSubmit}  className="LBtn">Signup</IonButton>
+        <IonButton onClick={this.handleSubmit} className="sign-button">Signup</IonButton>
         <p className="link">
            Return to <a href="./login">Login </a> 
          </p>

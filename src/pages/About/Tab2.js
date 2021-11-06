@@ -38,14 +38,14 @@ const Tab2 = () => {
             <br/>
             <br/> Be sure to engage with us on our social media platforms;
             <p>@Umsebenzi Wethu</p>
-            <a href="https://www.facebook.com"><IonImg src={facebook} className="contact-icons"/></a>
+            <a href="https://www.facebook.com/profile.php?id=100073410023749"><IonImg src={facebook} className="contact-icons"/></a>
             
             <p>@UmsebenziW</p>
-            <a href="https://www.instagram.com"><IonImg src={instagram} className="contact-icons"/>
+            <a href="https://instagram.com/umsebenziw?utm_medium=copy_link"><IonImg src={instagram} className="contact-icons"/>
             </a>
 
             <p> @UmsebenziW</p>
-            <a href="https://twitter.com">  <IonImg src={twitter} className="contact-icons"/></a>
+            <a href="https://twitter.com/UmsebenziW?t=TkTUxlaAkxwdL-1V8DaTQg&s=08">  <IonImg src={twitter} className="contact-icons"/></a>
            
           </div>
         
