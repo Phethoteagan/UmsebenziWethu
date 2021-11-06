@@ -142,7 +142,7 @@ const Form = () => {
             ></IonInput>
           </IonItem>
           <IonItem>
-            <IonLabel position="floating">Job Title </IonLabel>
+            <IonLabel position="floating">Job Title You intend to apply for under this category? </IonLabel>
             <IonInput
               onIonChange={(e) => setJobTitle(e.target.value)}
               required
