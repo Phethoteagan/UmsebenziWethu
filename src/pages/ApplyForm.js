@@ -18,8 +18,8 @@ import {
   IonHeader,
   IonToolbar,
 } from "@ionic/react";
-import Database from "./Database.js";
-import UserProfile from "./userSession";
+// import Database from "./src/pages/Database.js";
+import UserProfile from "../pages/userSession";
 import { useState, useEffect } from "react";
 // import { auth } from "../../firebaseConfig";
 // import { initializeApp } from "firebase/app";
@@ -142,7 +142,7 @@ const Form = () => {
             ></IonInput>
           </IonItem>
           <IonItem>
-            <IonLabel position="floating">Job Title You intend to apply for under this category? </IonLabel>
+            <IonLabel position="floating">Job Title </IonLabel>
             <IonInput
               onIonChange={(e) => setJobTitle(e.target.value)}
               required

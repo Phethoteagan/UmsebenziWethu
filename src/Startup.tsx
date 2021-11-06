@@ -10,7 +10,7 @@ import About from './pages/About/About';
 import Default from './pages/Home/Default';
 import Dashboard from './pages/Dashboard';
 import DashboardMain from './pages/DashboardMain'
-import Form from './pages/applyForm'
+import Form from "./pages/applyForm"
 
 
 const Startup: React.FC = () => {
